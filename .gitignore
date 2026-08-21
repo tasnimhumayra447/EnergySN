@@ -33,3 +33,5 @@ opensn_build
 #[Experiment]
 TopoConfigurators/opensn-go
 TopoConfigurators/opensn-rust
+daemon/config/config.json
+TopoConfigurators/Standard/config.py

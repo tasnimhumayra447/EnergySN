@@ -126,9 +126,13 @@ func NodeInit() error {
 			return err
 		}
 	}
-	err = allocNodeIndex()
-	if err != nil {
-		return fmt.Errorf("alloc node index error: %s", err.Error())
+	// allocNodeIndex() should only run for servant nodes, master should always stay locked at 0
+	// email OpenSN abt this!
+	if config.GlobalConfig.App.IsServant {
+		err = allocNodeIndex()
+		if err != nil {
+			return fmt.Errorf("alloc node index error: %s", err.Error())
+		}
 	}
 
 	key.InitKeys()
