@@ -340,7 +340,7 @@ func AddTopologyHandler(ctx *gin.Context) {
 			Extra:       instance.Extra,
 			DeviceInfo:  instance.DeviceInfo,
 			Resource:    typeConfig.ResourceLimit,
-			Start:       emulationConfig.Running,
+			Start:       false,  // Start as false, let main.py control startup after configs are ready
 			Connections: make(map[string]model.ConnectionInfo),
 		})
 	}

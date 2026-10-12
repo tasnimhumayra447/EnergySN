@@ -10,6 +10,7 @@ import (
 	"context"
 	"fmt"
 	"strconv"
+	"strings"
 	"sync"
 	"time"
 
@@ -75,7 +76,7 @@ func uploadLinkStatusInfo(
 					"namespace":   namespace,
 				},
 				structs.Map(utils.LinkResource{
-					SendBps:     (float64(thisInfo.RecvByte - prevInfo.RecvByte)) / (time.Sub(prevTime).Seconds()),
+					SendBps:     (float64(thisInfo.SendByte - prevInfo.SendByte)) / (time.Sub(prevTime).Seconds()),
 					RecvBps:     (float64(thisInfo.RecvByte - prevInfo.RecvByte)) / (time.Sub(prevTime).Seconds()),
 					SendPps:     float64(thisInfo.SendPack-prevInfo.SendPack) / (time.Sub(prevTime).Seconds()),
 					RecvPps:     float64(thisInfo.RecvPack-prevInfo.RecvPack) / (time.Sub(prevTime).Seconds()),
@@ -95,12 +96,16 @@ func uploadInstancePerformanceInfo(
 	namespaceMap map[string]string,
 	this map[string]*utils.InstanceResouceRaw,
 	prev map[string]*utils.InstanceResouceRaw,
-	totalTimeMs float64,
+	elapsedMs float64,                 // was totalTimeMs, now real wall-clock ms
 	time time.Time,
 ) []*write.Point {
 	var points []*write.Point
 	for instanceID, thisInfo := range this {
 		if prevInfo, ok := prev[instanceID]; ok {
+			capCores := thisInfo.CapCores
+			if capCores <= 0 {
+				capCores = 1.0
+			}
 			points = append(points, influxdb2.NewPoint(
 				key.InstancePerformanceKey,
 				map[string]string{
@@ -109,14 +114,13 @@ func uploadInstancePerformanceInfo(
 					"namespace":   namespaceMap[instanceID],
 				},
 				structs.Map(utils.InstanceResouce{
-					CPUUsage:    (thisInfo.CPUBusy - prevInfo.CPUBusy) / (totalTimeMs),
+					CPUUsage:    (thisInfo.CPUBusy - prevInfo.CPUBusy) / (elapsedMs * capCores),
 					MemByte:     (thisInfo.MemByte + prevInfo.MemByte) / 2,
 					SwapMemByte: (thisInfo.SwapMemByte + prevInfo.SwapMemByte) / 2,
 				}),
 				time,
 			))
 		}
-
 	}
 	return points
 }
@@ -128,6 +132,7 @@ func captureNodeStatus(sigChan chan int, errChan chan error) {
 	var prevInstanceResource map[string]*utils.InstanceResouceRaw
 	var prevTime = time.Now()
 	withPrev := false
+	previousActiveInstances := make(map[string]bool)
 	for {
 		select {
 		case sig := <-sigChan:
@@ -158,8 +163,12 @@ func captureNodeStatus(sigChan chan int, errChan chan error) {
 		}
 
 		instancePidPairs := []data.InstancePidPair{}
-
+		
+		// Build current active instances map
+		currentActiveInstances := make(map[string]bool)
 		for _, instance := range instances {
+			currentActiveInstances[instance.InstanceID] = true
+
 			if pid, ok := data.TryGetInstancePid(instance.InstanceID); ok {
 				instancePidPairs = append(instancePidPairs, data.InstancePidPair{
 					InstanceID: instance.InstanceID,
@@ -167,12 +176,29 @@ func captureNodeStatus(sigChan chan int, errChan chan error) {
 				})
 			}
 		}
+		
+		// Clean up PIDs for instances that were active but are no longer running
+		for instanceID := range previousActiveInstances {
+			if !currentActiveInstances[instanceID] {
+				data.DeleteInstancePid(instanceID)
+				logrus.Debugf("Cleaned up stale PID for deleted instance: %s", instanceID)
+			}
+		}
+		
+		// Update for next iteration
+		previousActiveInstances = currentActiveInstances
 		wg := utils.ForEachWithThreadPool[data.InstancePidPair](func(instanceInfo data.InstancePidPair) {
 			if instanceInfo.Pid == 0 {
 				return
 			}
 			instanceResouce, err := utils.GetInstanceResourceInfo(instanceInfo.InstanceID, instanceInfo.Pid)
 			if err != nil {
+				// Check if it's a stale PID error
+				if strings.Contains(err.Error(), "no such file or directory") || strings.Contains(err.Error(), "cgroup") {
+					logrus.Warnf("Stale PID %d for instance %s, deleting and skipping this cycle", instanceInfo.Pid, instanceInfo.InstanceID)
+					data.DeleteInstancePid(instanceInfo.InstanceID)
+					return
+				}
 				logrus.Errorf("Get Instance Performance of Instance %s Error: %s", instanceInfo.InstanceID, err.Error())
 				return
 			}
@@ -222,7 +248,7 @@ func captureNodeStatus(sigChan chan int, errChan chan error) {
 				instanceNamespaceMap,
 				thisInstanceResource,
 				prevInstanceResource,
-				thisNodeResouce.CPUTotal-prevNodeResouce.CPUTotal,
+    			float64(time.Sub(prevTime).Milliseconds()),    // was: thisNodeResouce.CPUTotal-prevNodeResouce.CPUTotal
 				time,
 			)
 			for instanceID, thisLinkResouceMap := range thisInstanceLinkResource {

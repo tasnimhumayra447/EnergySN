@@ -26,6 +26,7 @@ type InstanceResouceRaw struct {
 	CPUBusy     float64
 	MemByte     uint64
 	SwapMemByte uint64
+	CapCores    float64   // NEW: fraction of one core this container is capped to (from cgroup cpu.max)
 }
 
 type LinkResourceRaw struct {
@@ -152,6 +153,29 @@ func GetHostResourceInfo() (*HostResourceRaw, error) {
 	return ret, nil
 }
 
+func readCpuCapCores(cpuMaxPath string) (float64, error) {
+	data, err := os.ReadFile(cpuMaxPath)
+	if err != nil {
+		return 0, err
+	}
+	fields := strings.Fields(strings.TrimSpace(string(data)))
+	if len(fields) != 2 {
+		return 0, fmt.Errorf("invalid cpu.max format: %s", string(data))
+	}
+	if fields[0] == "max" {
+		return 1.0, nil
+	}
+	quota, err := strconv.ParseFloat(fields[0], 64)
+	if err != nil {
+		return 0, err
+	}
+	period, err := strconv.ParseFloat(fields[1], 64)
+	if err != nil || period == 0 {
+		return 0, fmt.Errorf("invalid period in cpu.max: %s", string(data))
+	}
+	return quota / period, nil
+}
+
 func GetInstanceResourceInfo(instanceID string, pid int) (*InstanceResouceRaw, error) {
 	cgroupProc, err := os.Open(fmt.Sprintf("/proc/%d/cgroup", pid))
 	defer cgroupProc.Close()
@@ -182,6 +206,12 @@ func GetInstanceResourceInfo(instanceID string, pid int) (*InstanceResouceRaw, e
 	cpuPath := path.Join(pathBase, "cpu.stat")
 	memPath := path.Join(pathBase, "memory.current")
 	swapPath := path.Join(pathBase, "memory.swap.current")
+	cpuMaxPath := path.Join(pathBase, "cpu.max")
+	capCores, err := readCpuCapCores(cpuMaxPath)
+	if err != nil {
+		logrus.Warn(fmt.Sprintf("Read Cpu Cap Of %s Error: %s", instanceID, err.Error()))
+		return nil, err
+	}
 
 	mem, err := readUint64(memPath)
 	if err != nil {
@@ -206,6 +236,7 @@ func GetInstanceResourceInfo(instanceID string, pid int) (*InstanceResouceRaw, e
 		CPUBusy:     cpuUsage / 1000,
 		MemByte:     mem,
 		SwapMemByte: swap,
+		CapCores:    capCores,
 	}, nil
 }
 

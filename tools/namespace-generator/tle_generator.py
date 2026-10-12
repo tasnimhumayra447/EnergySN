@@ -1,6 +1,13 @@
 from datetime import datetime
 from type_model_def import EmulationTypeConfig, TopologyLink, TopologyInstance, TopologyConfig
-from instance_types import EX_TLE0_KEY,EX_TLE1_KEY,EX_TLE2_KEY,EX_ORBIT_INDEX,EX_SATELLITE_INDEX,EX_LATITUDE_KEY,EX_LONGITUDE_KEY,EX_GROUND_INDEX,TYPE_GROUND_STATION,TYPE_SATELLITE,EX_AREA_KEY,EX_ALTITUDE_KEY,EX_PANEL_AREA_KEY,EX_CELL_EFFICIENCY_KEY,EX_SYSTEM_EFFICIENCY_KEY,EX_IDLE_POWER_KEY,EX_MAX_POWER_KEY
+from instance_types import (
+    EX_TLE0_KEY,EX_TLE1_KEY,EX_TLE2_KEY,EX_ORBIT_INDEX,EX_SATELLITE_INDEX,EX_LATITUDE_KEY,
+    EX_LONGITUDE_KEY,EX_GROUND_INDEX,TYPE_GROUND_STATION,TYPE_SATELLITE,EX_AREA_KEY,EX_ALTITUDE_KEY,
+    EX_PANEL_AREA_KEY,EX_CELL_EFFICIENCY_KEY,EX_SYSTEM_EFFICIENCY_KEY,EX_IDLE_POWER_KEY,EX_MAX_POWER_KEY,
+    EX_BATTERY_CAPACITY_WH_KEY, EX_BATTERY_THRESHOLD_PERCENT_KEY,
+    EX_SENSOR_POWER_KEY, EX_ALPHA_DVFS_KEY, EX_MAX_FREQUENCY_KEY, EX_BANDWIDTH_KEY, EX_CHANNEL_GAIN_RATIO_KEY,
+    )
+
 from address_type import LINK_V4_ADDR_KEY
 import random
 import json
@@ -109,11 +116,18 @@ if __name__ == "__main__":
                     EX_AREA_KEY:"0.0.0.0",
                     EX_ORBIT_INDEX: str(i),
                     EX_SATELLITE_INDEX: str(j),
-                    EX_PANEL_AREA_KEY: "12.5",         # hardware specs start here
-                    EX_CELL_EFFICIENCY_KEY: "0.29",    
-                    EX_SYSTEM_EFFICIENCY_KEY: "0.85",  
-                    EX_IDLE_POWER_KEY: "15.0",         
-                    EX_MAX_POWER_KEY: "120.0",
+                    EX_PANEL_AREA_KEY: "0.059",
+                    EX_CELL_EFFICIENCY_KEY: "0.29",
+                    EX_SYSTEM_EFFICIENCY_KEY: "0.90",
+                    EX_IDLE_POWER_KEY: "4.0",
+                    EX_MAX_POWER_KEY: "20.0",
+                    EX_BATTERY_CAPACITY_WH_KEY: "30.0",
+                    EX_BATTERY_THRESHOLD_PERCENT_KEY: "10.0",
+                    EX_SENSOR_POWER_KEY: "2.0",
+                    EX_ALPHA_DVFS_KEY: "6.46e-27",
+                    EX_MAX_FREQUENCY_KEY: "9.18e8",
+                    EX_BANDWIDTH_KEY: "1e6",
+                    EX_CHANNEL_GAIN_RATIO_KEY: "17.5",
                 }))
             node_grid.append(array)
         links = []

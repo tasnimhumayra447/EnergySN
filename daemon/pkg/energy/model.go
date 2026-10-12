@@ -1,7 +1,8 @@
 // This file implements the energy model for one satellite. It has two separate jobs:
 
 // Generation: How many watts the solar panel produces from sunlight.
-// Consumption: How many watts the satellite uses based on its utilization.
+// Consumption: How many watts the satellite uses, based on its CPU utilization
+// and (for the component model) its downlink transmission to a ground station.
 
 // The important design idea is that these are models, not the simulation itself. They take inputs and return a number. 
 // They do not know about Docker, satellites, or the rest of OpenSN.
@@ -36,10 +37,17 @@ type GenerationModel interface {
 	Generate(spec PowerSpecInput, sunAngleRad float64) float64
 }
 
+// ConsumptionInput is the per-tick workload of one satellite.
+type ConsumptionInput struct {
+	Utilization      float64 // u(t), 0..1, sets CPU frequency
+	HasGroundContact bool    // Ic(t), true if a ground station link is up
+	TxRateBps        float64 // R(t), downlink rate, only used when HasGroundContact is true
+}
+
 // ConsumptionModel computes instantaneous consumed power (Watts) for one
-// satellite, given its static hardware spec and current utilization u(t).
+// satellite, given its static hardware spec and its current workload.
 type ConsumptionModel interface {
-	Consume(spec PowerSpecInput, utilization float64) float64
+	Consume(spec PowerSpecInput, in ConsumptionInput) float64
 }
 
 // PowerSpecInput mirrors model.PowerSpec. Declared separately here so this
@@ -49,8 +57,14 @@ type PowerSpecInput struct {
 	PanelAreaM2      float64
 	CellEfficiency   float64
 	SystemEfficiency float64
-	IdlePowerW       float64
+	IdlePowerW       float64 // platform power P_a
 	MaxPowerW        float64
+
+	SensorPowerW     float64
+	AlphaDVFS        float64
+	MaxFrequencyHz   float64
+	BandwidthHz      float64
+	ChannelGainRatio float64
 }
 
 // ReflectivityLoss is a standard empirical estimate for angle-dependent
@@ -119,15 +133,15 @@ func (m *FullPowerModel) Generate(spec PowerSpecInput, sunAngleRad float64) floa
 //
 // utilization is expected in [0, 1]; values outside that range are clamped
 // so a bad upstream u(t) value can't produce a negative or over-max power
-// draw.
+// draw. Ground contact and tx rate are ignored by this model.
 type LinearConsumptionModel struct{}
 
 func NewLinearConsumptionModel() *LinearConsumptionModel {
 	return &LinearConsumptionModel{}
 }
 
-func (m *LinearConsumptionModel) Consume(spec PowerSpecInput, utilization float64) float64 {
-	u := utilization
+func (m *LinearConsumptionModel) Consume(spec PowerSpecInput, in ConsumptionInput) float64 {
+	u := in.Utilization
 	if u < 0 {
 		u = 0
 	}
@@ -135,4 +149,38 @@ func (m *LinearConsumptionModel) Consume(spec PowerSpecInput, utilization float6
 		u = 1
 	}
 	return spec.IdlePowerW + (spec.MaxPowerW-spec.IdlePowerW)*u
+}
+
+// ComponentConsumptionModel adds up the power of each part of the satellite:
+//
+//   P_consume = P_idle + P_sensor + P_compute + P_comm
+//
+//   P_compute = a * f^3                    where f = u * f_max (DVFS)
+//   P_comm    = (2^(R/B) - 1) / (h/N0)     only while a ground link is up
+//
+// Total is capped at MaxPowerW, the hardware limit.
+type ComponentConsumptionModel struct{}
+
+func NewComponentConsumptionModel() *ComponentConsumptionModel {
+	return &ComponentConsumptionModel{}
+}
+
+func (m *ComponentConsumptionModel) Consume(spec PowerSpecInput, in ConsumptionInput) float64 {
+	// Compute: CPU frequency follows utilization
+	u := math.Max(0, math.Min(1, in.Utilization))
+	freq := u * spec.MaxFrequencyHz
+	computeW := spec.AlphaDVFS * freq * freq * freq
+
+	// Comm: only draws power while a ground station link is up
+	commW := 0.0
+	if in.HasGroundContact {
+		rate := math.Max(0, in.TxRateBps)
+		commW = (math.Pow(2, rate/spec.BandwidthHz) - 1) / spec.ChannelGainRatio
+	}
+
+	total := spec.IdlePowerW + spec.SensorPowerW + computeW + commW
+	if spec.MaxPowerW > 0 && total > spec.MaxPowerW {
+		total = spec.MaxPowerW
+	}
+	return total
 }

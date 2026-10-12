@@ -74,65 +74,64 @@ def select_closest_satellite(
 Use the satellite's existing TLE and the simulation time with PyEphem to determine
 the Sun's altitude from the satellite's location, then convert that altitude into gamma """
 def calculate_sun_angle(instance_info, ephem_time) -> float:
-    """
-    Returns gamma: the angle (radians) between the satellite's solar panel
-    normal and the sun vector, at the given time.
-
-    0         --> sun directly overhead the panel (max generation);
-    pi/2  <=  --> sun below the panel plane /
-                  no generation (satellite in eclipse or panel edge-on to the sun).
- 
-    Simplification: assumes the panel is always sun-pointing on the axis
-    that matters (i.e. this returns the angle between the satellite's
-    position vector and the sun vector, treating the panel as nadir/zenith
-    oriented). If your satellite model has independent panel articulation,
-    this needs a more detailed attitude model. This is a standard simplification for
-    constellation-level power estimates, not real single-satellite ADCS
-    (attitude determination and control) modeling.
-    """
-    # Reuse the same TLE-based ephem object construction already used in
-    # calculate_postion() for this instance, so gamma is computed from the
-    # exact same orbital state as position — no risk of the two drifting
-    # out of sync from being computed via different means.
-    
-    ephem_obj = ephem.readtle(
+    # Find the satellite's TLE from the instance_info and create a PyEphem satellite object
+    # TLE = a set of numbers describing the satellite's orbit (speed, time etc).
+    sat = ephem.readtle(
         instance_info.extra[EX_TLE0_KEY],
         instance_info.extra[EX_TLE1_KEY],
         instance_info.extra[EX_TLE2_KEY],
     )
 
-    # Calculate satellite position at that time
-    ephem_obj.compute(ephem_time)
+    # Compute the satellite's position at the given time
+    sat.compute(ephem_time)
 
-    # Create the Sun 
+    # Is it in eclipse?
+    if sat.eclipsed:
+        return math.pi / 2   # 90 degrees means no sunlight
+
+    # satellite's distance from Earth's centre, altitude + earth radius
+    r_sat = R_EARTH + sat.elevation
+
+    # Satellite position vector, Earth-centered and Earth-fixed 
+    # (coordinate system rotates with the Earth), in meters
+    sat_vec = (
+        r_sat * math.cos(sat.sublat) * math.cos(sat.sublong),
+        r_sat * math.cos(sat.sublat) * math.sin(sat.sublong),
+        r_sat * math.sin(sat.sublat),
+    )
+
+    # create a sun object and compute its position at the given time
     sun = ephem.Sun()
-
-    # Sun's astronomical position at the simulation time.
     sun.compute(ephem_time)
- 
-    # ephem gives sub-observer-style angles for a body's position; for a
-    # simple sun-pointing-panel approximation, the angle between the
-    # satellite's sub-point-to-sun direction and its local zenith is a
-    # reasonable, standard estimate. `ephem` doesn't give this directly for
-    # two arbitrary bodies without an observer, so compute it via the
-    # satellite's own position as the observer:
 
-    # Create an observer at the satellite's location
-    observer = ephem.Observer() 
-    observer.lat = str(ephem_obj.sublat)       #latitude
-    observer.long = str(ephem_obj.sublong)     # longitude
-    observer.elevation = max(ephem_obj.elevation, 0)   # set observer's altitude
-    observer.date = ephem_time
-    sun.compute(observer)
- 
-    # sun.alt is the sun's altitude above the local horizon at the
-    # satellite's sub-point, as seen by an observer there.
-    # Panel-normal angle gamma = 90 degrees - altitude (sun at zenith -> gamma = 0).
-    gamma = (math.pi / 2) - float(sun.alt)
- 
-    # Eclipse / below-horizon: clamp so callers don't need to special-case
-    # negative-altitude sun positions separately from the physical "no
-    # generation" case already handled in FullPowerModel.Generate (Go side
-    # clamps on cos(gamma) <= 0, so any gamma >= pi/2 here has the same
-    # zero-generation effect regardless of the exact value beyond that).
-    return max(0.0, gamma)
+    # Sun position. ephem's ra/dec are in the inertial frame, but sublat/sublong
+    # above are Earth-fixed, so subtract Greenwich sidereal time to put the Sun
+    # in the same Earth-fixed frame.
+
+    # Basically, convert Sun's position to Earth-fixed coordinates
+    # So the Sun and satellite are are in the same coordinate system
+    greenwich = ephem.Observer()
+    greenwich.lon = '0'
+    greenwich.lat = '0'
+    greenwich.date = ephem_time
+    sun_ra_fixed = sun.g_ra - greenwich.sidereal_time()
+
+    AU_M = 149597870700.0   # meters, same unit as R_EARTH
+    r_sun = sun.earth_distance * AU_M
+    sun_vec_geo = (
+        r_sun * math.cos(sun.g_dec) * math.cos(sun_ra_fixed),
+        r_sun * math.cos(sun.g_dec) * math.sin(sun_ra_fixed),
+        r_sun * math.sin(sun.g_dec),
+    )
+
+    # Direction from satellite to sun
+    sun_vec = tuple(s - p for s, p in zip(sun_vec_geo, sat_vec))
+
+    dot = sum(a * b for a, b in zip(sat_vec, sun_vec))
+    mag_sat = math.sqrt(sum(a * a for a in sat_vec))
+    mag_sun = math.sqrt(sum(a * a for a in sun_vec))
+
+    cos_gamma = dot / (mag_sat * mag_sun)
+    cos_gamma = max(-1.0, min(1.0, cos_gamma))
+
+    return math.acos(cos_gamma)

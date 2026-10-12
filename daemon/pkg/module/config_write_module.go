@@ -59,6 +59,7 @@ func watchConfigChange(sigChan chan int, errChan chan error) {
 					keySplit := strings.Split(string(event.Kv.Key), "/")
 					instanceID := keySplit[len(keySplit)-1]
 					configPath := path.Join(dir.TopoInfoDir, instanceID)
+					logrus.Infof("ConfigWriteModule: Writing config for instance %s to %s", instanceID, configPath)
 					if len(event.Kv.Value) > 0 {
 						fd, err := os.Create(configPath)
 						if err != nil {
@@ -72,6 +73,8 @@ func watchConfigChange(sigChan chan int, errChan chan error) {
 							logrus.Error(errMsg)
 							continue
 						}
+						fd.Close()
+						logrus.Infof("ConfigWriteModule: Successfully wrote config to %s", configPath)
 					} else {
 						os.Remove(configPath)
 					}
