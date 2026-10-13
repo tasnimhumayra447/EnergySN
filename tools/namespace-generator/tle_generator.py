@@ -126,7 +126,7 @@ if __name__ == "__main__":
                     EX_SENSOR_POWER_KEY: "2.0",
                     EX_ALPHA_DVFS_KEY: "6.46e-27",
                     EX_MAX_FREQUENCY_KEY: "9.18e8",
-                    EX_BANDWIDTH_KEY: "1e6",
+                    EX_BANDWIDTH_KEY: "1.6e5",
                     EX_CHANNEL_GAIN_RATIO_KEY: "17.5",
                 }))
             node_grid.append(array)

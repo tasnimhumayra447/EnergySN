@@ -248,15 +248,18 @@ func powerDaemonFunc(sigChan chan int, errChan chan error) {
 			if err != nil {
 				logrus.Errorf("PowerModule: put power status for %s error: %s", instance.InstanceID, err.Error())
 			} else {
-				logrus.Infof("PowerModule DEBUG: ts=%.2f instance=%s gen=%.2fW consume=%.2fW battery=%.2f%% (%.2f/%.2f Wh)",
-							input.Timestamp,
-							instance.InstanceID,
-							generated,
-							consumed,
-							percent,
-							newWh,
-							battCfg.CapacityWh,
-						)
+				logrus.Infof("PowerModule DEBUG: ts=%.2f instance=%s u=%.3f contact=%t tx=%.0fbps gen=%.2fW consume=%.2fW battery=%.2f%% (%.2f/%.2f Wh)",
+					input.Timestamp,
+					instance.InstanceID,
+					input.Utilization,
+					input.HasGroundContact,
+					input.TxRateBps,
+					generated,
+					consumed,
+					percent,
+					newWh,
+					battCfg.CapacityWh,
+					)
 			}
 		}
 	}
