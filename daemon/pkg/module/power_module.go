@@ -32,6 +32,8 @@ const (
 	ExMaxFrequencyKey     = "max_frequency_hz"
 	ExBandwidthKey        = "bandwidth_hz"
 	ExChannelGainRatioKey = "channel_gain_ratio"
+	ExStaticPowerKey      = "static_power_w"   // c2, constant power of the on-board computer
+	ExMinFrequencyKey     = "min_frequency_hz" // lowest CPU frequency DVFS may pick
 	ExBatteryCapacityWhKey    = "battery_capacity_wh"    // size this to survive eclipse
 	ExBatteryThresholdPercentKey = "battery_threshold_percent" // e.g. "10" for 10%
 )
@@ -67,6 +69,7 @@ func specFromExtra(extra map[string]string) (energy.PowerSpecInput, bool) {
 	keys := []string{
 		ExPanelAreaKey, ExCellEfficiencyKey, ExSystemEffKey, ExIdlePowerKey, ExMaxPowerKey,
 		ExSensorPowerKey, ExAlphaDVFSKey, ExMaxFrequencyKey, ExBandwidthKey, ExChannelGainRatioKey,
+		ExStaticPowerKey, ExMinFrequencyKey,
 	}
 	values := make(map[string]float64, len(keys))
 	for _, k := range keys {
@@ -92,6 +95,8 @@ func specFromExtra(extra map[string]string) (energy.PowerSpecInput, bool) {
 		MaxFrequencyHz:   values[ExMaxFrequencyKey],
 		BandwidthHz:      values[ExBandwidthKey],
 		ChannelGainRatio: values[ExChannelGainRatioKey],
+		StaticPowerW:     values[ExStaticPowerKey],
+		MinFrequencyHz:   values[ExMinFrequencyKey],
 	}, true
 }
 
@@ -119,7 +124,15 @@ func batteryConfigFromExtra(extra map[string]string) (batteryConfig, bool) {
 
 func powerDaemonFunc(sigChan chan int, errChan chan error) {
 	generationModel := energy.NewFullPowerModel()
-	consumptionModel := energy.NewComponentConsumptionModel()
+	// DVFS policy: one policy for all satellites, like the generation model.
+	// Format: "utilization limit : fraction of max frequency", bands from low to high.
+	// PLACEHOLDER: sample policy (u up to 50% runs at fmax/2, above that at fmax)
+	policy, err := energy.ParseBandPolicy("0.5:0.5,1.0:1.0")
+	if err != nil {
+		errChan <- err
+		return
+	}
+	consumptionModel := energy.NewComponentConsumptionModel(policy)
 
 	// Battery state, persists across ticks, keyed by InstanceID.
 	// Stored in Wh (real energy units) — NOT percent. Percent is derived
@@ -177,6 +190,11 @@ func powerDaemonFunc(sigChan chan int, errChan chan error) {
 			// call the energy caclulation models
 			generated := generationModel.Generate(spec, input.SunAngleRad)
 			consumed := consumptionModel.Consume(spec, energy.ConsumptionInput{
+				Utilization:      input.Utilization,
+				HasGroundContact: input.HasGroundContact,
+				TxRateBps:        input.TxRateBps,
+			})
+			commW := consumptionModel.CommPower(spec, energy.ConsumptionInput{
 				Utilization:      input.Utilization,
 				HasGroundContact: input.HasGroundContact,
 				TxRateBps:        input.TxRateBps,
@@ -248,7 +266,8 @@ func powerDaemonFunc(sigChan chan int, errChan chan error) {
 			if err != nil {
 				logrus.Errorf("PowerModule: put power status for %s error: %s", instance.InstanceID, err.Error())
 			} else {
-				logrus.Infof("PowerModule DEBUG: ts=%.2f instance=%s u=%.3f contact=%t tx=%.0fbps gen=%.2fW consume=%.2fW battery=%.2f%% (%.2f/%.2f Wh)",
+				freqMHz := consumptionModel.Policy.Frequency(spec, input.Utilization) / 1e6
+				logrus.Infof("PowerModule DEBUG: ts=%.2f instance=%s u=%.3f contact=%t tx=%.0fbps gen=%.2fW consume=%.2fW battery=%.2f%% (%.2f/%.2f Wh) freq=%.0fMHz comm=%.6fW",
 					input.Timestamp,
 					instance.InstanceID,
 					input.Utilization,
@@ -259,7 +278,10 @@ func powerDaemonFunc(sigChan chan int, errChan chan error) {
 					percent,
 					newWh,
 					battCfg.CapacityWh,
-					)
+					freqMHz,
+					commW,
+				)
+			
 			}
 		}
 	}

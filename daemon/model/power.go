@@ -12,19 +12,30 @@ package model
 //   system_efficiency   -> SystemEfficiency
 //   idle_power_w        -> IdlePowerW
 //   max_power_w         -> MaxPowerW
+//   sensor_power_w      -> SensorPowerW
+//   alpha_dvfs          -> AlphaDVFS
+//   max_frequency_hz    -> MaxFrequencyHz
+//   min_frequency_hz    -> MinFrequencyHz
+//   static_power_w      -> StaticPowerW
+//   bandwidth_hz        -> BandwidthHz
+//   channel_gain_ratio  -> ChannelGainRatio
 type PowerSpec struct {
 	PanelAreaM2      float64 `json:"panel_area_m2"`
 	CellEfficiency   float64 `json:"cell_efficiency"`
 	SystemEfficiency float64 `json:"system_efficiency"`
-	IdlePowerW       float64 `json:"idle_power_w"`	 // Serves as P_a (platform power)
+	IdlePowerW       float64 `json:"idle_power_w"`       // P_a, platform load excluding computer, sensor and radio
 	MaxPowerW        float64 `json:"max_power_w"`
 
 	// Li et al. Hardware Constants
 	SensorPowerW     float64 `json:"sensor_power_w"`     // P_sen, constant camera power
-	AlphaDVFS        float64 `json:"alpha_dvfs"`         // a, compute power = a * f^3
-	MaxFrequencyHz   float64 `json:"max_frequency_hz"`   // f_max, CPU frequency at u = 1
 	BandwidthHz      float64 `json:"bandwidth_hz"`       // B
 	ChannelGainRatio float64 `json:"channel_gain_ratio"` // h / N0
+
+	// On-board computer (DVFS): P_IT = c1 * f^3 * u + c2
+	AlphaDVFS      float64 `json:"alpha_dvfs"`       // c1, dynamic power coefficient
+	StaticPowerW   float64 `json:"static_power_w"`   // c2, constant power whenever the computer is on
+	MaxFrequencyHz float64 `json:"max_frequency_hz"` // f_max, highest CPU frequency
+	MinFrequencyHz float64 `json:"min_frequency_hz"` // f_min, lowest CPU frequency
 }
 
 // SolarInput is written by the Python Topology Configurator every tick
@@ -34,8 +45,8 @@ type PowerSpec struct {
 // daemon, consumed by a Go module.
 type SolarInput struct {
 	SunAngleRad float64 `json:"sun_angle_rad"` // gamma, radians, 0 = sun directly overhead panel
-	Utilization float64 `json:"utilization"`   // // u(t) for DVFS
-	Timestamp   float64 `json:"timestamp"`   // NEW — must match Python's key name exactly
+	Utilization float64 `json:"utilization"` // u(t), measured CPU utilization 0..1, used by the DVFS policy
+	Timestamp   float64 `json:"timestamp"`   // sample time, must match Python's key name exactly
 	
 	HasGroundContact bool    `json:"has_ground_contact"` // Ic(t)
 	TxRateBps        float64 `json:"tx_rate_bps"`        // R(t)

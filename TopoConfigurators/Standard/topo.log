@@ -1,198 +1,514 @@
-TX test mode: levels=[0.0, 250000.0, 500000.0, 750000.0, 1000000.0], step=300s
-2026-10-13 12:34:58.665 | INFO     | __main__:init_influxdb_client:87 - InfluxDB client initialized successfully
-2026-10-13 12:34:58.666 | INFO     | __main__:<module>:152 - Waiting for topology to be processed...
-2026-10-13 12:35:01.667 | INFO     | __main__:<module>:157 - Pre-generating all instance configs...
-2026-10-13 12:35:02.123 | INFO     | __main__:<module>:169 - Pre-generated config for 04cbcac2
-2026-10-13 12:35:02.194 | INFO     | __main__:<module>:169 - Pre-generated config for 059c4881
-2026-10-13 12:35:02.256 | INFO     | __main__:<module>:169 - Pre-generated config for 0c302292
-2026-10-13 12:35:02.325 | INFO     | __main__:<module>:169 - Pre-generated config for 102f785c
-2026-10-13 12:35:02.387 | INFO     | __main__:<module>:169 - Pre-generated config for 11f96f50
-2026-10-13 12:35:02.462 | INFO     | __main__:<module>:169 - Pre-generated config for 154921c0
-2026-10-13 12:35:02.513 | INFO     | __main__:<module>:169 - Pre-generated config for 1c48e4a1
-2026-10-13 12:35:02.587 | INFO     | __main__:<module>:169 - Pre-generated config for 20d2827e
-2026-10-13 12:35:02.634 | INFO     | __main__:<module>:169 - Pre-generated config for 22904c91
-2026-10-13 12:35:02.698 | INFO     | __main__:<module>:169 - Pre-generated config for 23014c46
-2026-10-13 12:35:02.752 | INFO     | __main__:<module>:169 - Pre-generated config for 3144a529
-2026-10-13 12:35:02.809 | INFO     | __main__:<module>:169 - Pre-generated config for 3619816b
-2026-10-13 12:35:02.870 | INFO     | __main__:<module>:169 - Pre-generated config for 3677cdc1
-2026-10-13 12:35:02.921 | INFO     | __main__:<module>:169 - Pre-generated config for 3c09a788
-2026-10-13 12:35:02.974 | INFO     | __main__:<module>:169 - Pre-generated config for 45d3bb2f
-2026-10-13 12:35:03.048 | INFO     | __main__:<module>:169 - Pre-generated config for 532282ba
-2026-10-13 12:35:03.110 | INFO     | __main__:<module>:169 - Pre-generated config for 54a43641
-2026-10-13 12:35:03.183 | INFO     | __main__:<module>:169 - Pre-generated config for 58c97e33
-2026-10-13 12:35:03.253 | INFO     | __main__:<module>:169 - Pre-generated config for 5b46eb90
-2026-10-13 12:35:03.302 | INFO     | __main__:<module>:169 - Pre-generated config for 60d3db78
-2026-10-13 12:35:03.375 | INFO     | __main__:<module>:169 - Pre-generated config for 6212ddb0
-2026-10-13 12:35:03.415 | INFO     | __main__:<module>:169 - Pre-generated config for 708ecde9
-2026-10-13 12:35:03.429 | INFO     | __main__:<module>:169 - Pre-generated config for 71ecc26a
-2026-10-13 12:35:03.494 | INFO     | __main__:<module>:169 - Pre-generated config for 79cec0d9
-2026-10-13 12:35:03.520 | INFO     | __main__:<module>:169 - Pre-generated config for 7b0b5234
-2026-10-13 12:35:03.583 | INFO     | __main__:<module>:169 - Pre-generated config for 7beb7aea
-2026-10-13 12:35:03.634 | INFO     | __main__:<module>:169 - Pre-generated config for 80283466
-2026-10-13 12:35:03.674 | INFO     | __main__:<module>:169 - Pre-generated config for 81560ad6
-2026-10-13 12:35:03.742 | INFO     | __main__:<module>:169 - Pre-generated config for 83173d38
-2026-10-13 12:35:03.791 | INFO     | __main__:<module>:169 - Pre-generated config for 861a38b3
-2026-10-13 12:35:03.864 | INFO     | __main__:<module>:169 - Pre-generated config for 8a27b954
-2026-10-13 12:35:03.920 | INFO     | __main__:<module>:169 - Pre-generated config for 8da83fed
-2026-10-13 12:35:03.969 | INFO     | __main__:<module>:169 - Pre-generated config for 8f3461cd
-2026-10-13 12:35:04.031 | INFO     | __main__:<module>:169 - Pre-generated config for 90773dde
-2026-10-13 12:35:04.094 | INFO     | __main__:<module>:169 - Pre-generated config for 9283e5ed
-2026-10-13 12:35:04.140 | INFO     | __main__:<module>:169 - Pre-generated config for 937dd2f9
-2026-10-13 12:35:04.180 | INFO     | __main__:<module>:169 - Pre-generated config for 947fde15
-2026-10-13 12:35:04.246 | INFO     | __main__:<module>:169 - Pre-generated config for 97a201ba
-2026-10-13 12:35:04.286 | INFO     | __main__:<module>:169 - Pre-generated config for 9b3fc0f2
-2026-10-13 12:35:04.350 | INFO     | __main__:<module>:169 - Pre-generated config for 9c900c61
-2026-10-13 12:35:04.389 | INFO     | __main__:<module>:169 - Pre-generated config for 9ee12b78
-2026-10-13 12:35:04.458 | INFO     | __main__:<module>:169 - Pre-generated config for ae28283e
-2026-10-13 12:35:04.510 | INFO     | __main__:<module>:169 - Pre-generated config for aebad364
-2026-10-13 12:35:04.579 | INFO     | __main__:<module>:169 - Pre-generated config for af471a79
-2026-10-13 12:35:04.627 | INFO     | __main__:<module>:169 - Pre-generated config for af9318c6
-2026-10-13 12:35:04.701 | INFO     | __main__:<module>:169 - Pre-generated config for afb76fa7
-2026-10-13 12:35:04.763 | INFO     | __main__:<module>:169 - Pre-generated config for b1b69f0e
-2026-10-13 12:35:04.820 | INFO     | __main__:<module>:169 - Pre-generated config for bc27bf4e
-2026-10-13 12:35:04.880 | INFO     | __main__:<module>:169 - Pre-generated config for c1b1d303
-2026-10-13 12:35:04.985 | INFO     | __main__:<module>:169 - Pre-generated config for c8b5c174
-2026-10-13 12:35:05.133 | INFO     | __main__:<module>:169 - Pre-generated config for c9ce2a6b
-2026-10-13 12:35:05.209 | INFO     | __main__:<module>:169 - Pre-generated config for cf11c556
-2026-10-13 12:35:05.259 | INFO     | __main__:<module>:169 - Pre-generated config for cf23b3a2
-2026-10-13 12:35:05.341 | INFO     | __main__:<module>:169 - Pre-generated config for d1042385
-2026-10-13 12:35:05.447 | INFO     | __main__:<module>:169 - Pre-generated config for d7d84d0a
-2026-10-13 12:35:05.508 | INFO     | __main__:<module>:169 - Pre-generated config for dc535610
-2026-10-13 12:35:05.595 | INFO     | __main__:<module>:169 - Pre-generated config for ddad7d9d
-2026-10-13 12:35:05.680 | INFO     | __main__:<module>:169 - Pre-generated config for df09e733
-2026-10-13 12:35:05.700 | INFO     | __main__:<module>:169 - Pre-generated config for df45ad38
-2026-10-13 12:35:05.768 | INFO     | __main__:<module>:169 - Pre-generated config for df810921
-2026-10-13 12:35:05.823 | INFO     | __main__:<module>:169 - Pre-generated config for e819f17e
-2026-10-13 12:35:05.914 | INFO     | __main__:<module>:169 - Pre-generated config for eca2c879
-2026-10-13 12:35:05.968 | INFO     | __main__:<module>:169 - Pre-generated config for eea9c7c3
-2026-10-13 12:35:06.041 | INFO     | __main__:<module>:169 - Pre-generated config for f3d81761
-2026-10-13 12:35:06.112 | INFO     | __main__:<module>:169 - Pre-generated config for f3e7d834
-2026-10-13 12:35:06.191 | INFO     | __main__:<module>:169 - Pre-generated config for f6724769
-2026-10-13 12:35:06.258 | INFO     | __main__:<module>:169 - Pre-generated config for fa89e6c0
-2026-10-13 12:35:06.333 | INFO     | __main__:<module>:169 - Pre-generated config for fb37246e
-2026-10-13 12:35:06.333 | INFO     | __main__:<module>:173 - Waiting for config files to be written to disk...
-2026-10-13 12:35:08.333 | INFO     | __main__:<module>:177 - Starting instances...
-2026-10-13 12:35:08.334 | INFO     | __main__:<module>:187 - Waiting for containers to start...
-2026-10-13 12:36:06.376 | INFO     | __main__:<module>:289 - Switch 71ecc26a from None to 7b0b5234
-2026-10-13 12:36:06.461 | INFO     | __main__:<module>:289 - Switch df45ad38 from None to 1c48e4a1
-2026-10-13 12:36:06.568 | INFO     | __main__:<module>:319 - Ground contact: 0 satellites, tx rates (bps): {}
-2026-10-13 12:36:06.568 | INFO     | __main__:<module>:327 - TX TEST: step=0 tx_rate=0.0 bps
-2026-10-13 12:36:09.261 | INFO     | __main__:<module>:397 - Loop iteration took 57.93s (target: 5s)
-2026-10-13 12:36:56.091 | INFO     | __main__:<module>:272 - Switch df45ad38 from 1c48e4a1 to 80283466
-2026-10-13 12:36:56.392 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'021a541f': 0.0, '744b7ab9': 0.0}
-2026-10-13 12:36:56.392 | INFO     | __main__:<module>:327 - TX TEST: step=0 tx_rate=0.0 bps
-2026-10-13 12:36:58.113 | INFO     | __main__:<module>:397 - Loop iteration took 43.85s (target: 5s)
-2026-10-13 12:37:43.947 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'1b5ca766': 0.0, '744b7ab9': 0.0}
-2026-10-13 12:37:43.948 | INFO     | __main__:<module>:327 - TX TEST: step=0 tx_rate=0.0 bps
-2026-10-13 12:37:45.526 | INFO     | __main__:<module>:397 - Loop iteration took 42.41s (target: 5s)
-2026-10-13 12:38:35.447 | INFO     | __main__:<module>:272 - Switch 71ecc26a from 7b0b5234 to d7d84d0a
-2026-10-13 12:38:35.878 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'1b5ca766': 0.0, '744b7ab9': 0.0}
-2026-10-13 12:38:35.878 | INFO     | __main__:<module>:327 - TX TEST: step=0 tx_rate=0.0 bps
-2026-10-13 12:38:38.088 | INFO     | __main__:<module>:397 - Loop iteration took 47.56s (target: 5s)
-2026-10-13 12:39:22.185 | INFO     | __main__:<module>:272 - Switch 71ecc26a from d7d84d0a to 7beb7aea
-2026-10-13 12:39:22.485 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'1b5ca766': 0.0, 'dfcebced': 0.0}
-2026-10-13 12:39:22.485 | INFO     | __main__:<module>:327 - TX TEST: step=0 tx_rate=0.0 bps
-2026-10-13 12:39:24.030 | INFO     | __main__:<module>:397 - Loop iteration took 40.94s (target: 5s)
-2026-10-13 12:40:11.192 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'1b5ca766': 0.0, 'd9827e8e': 0.0}
-2026-10-13 12:40:11.192 | INFO     | __main__:<module>:327 - TX TEST: step=1 tx_rate=250000.0 bps
-2026-10-13 12:40:12.768 | INFO     | __main__:<module>:397 - Loop iteration took 43.74s (target: 5s)
-2026-10-13 12:40:59.664 | INFO     | __main__:<module>:272 - Switch 71ecc26a from 7beb7aea to 6212ddb0
-2026-10-13 12:40:59.982 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'1b5ca766': 0.0, 'd9827e8e': 0.0}
-2026-10-13 12:40:59.982 | INFO     | __main__:<module>:327 - TX TEST: step=1 tx_rate=250000.0 bps
-2026-10-13 12:41:01.515 | INFO     | __main__:<module>:397 - Loop iteration took 43.75s (target: 5s)
-2026-10-13 12:41:47.490 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'1b5ca766': 0.0, 'bb1b08f1': 0.0}
-2026-10-13 12:41:47.490 | INFO     | __main__:<module>:327 - TX TEST: step=1 tx_rate=250000.0 bps
-2026-10-13 12:41:49.396 | INFO     | __main__:<module>:397 - Loop iteration took 42.88s (target: 5s)
-2026-10-13 12:43:15.235 | INFO     | __main__:<module>:272 - Switch 71ecc26a from 6212ddb0 to 8a27b954
-2026-10-13 12:43:15.599 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'1b5ca766': 0.0, 'bb1b08f1': 0.0}
-2026-10-13 12:43:15.599 | INFO     | __main__:<module>:327 - TX TEST: step=1 tx_rate=250000.0 bps
-2026-10-13 12:43:17.382 | INFO     | __main__:<module>:397 - Loop iteration took 82.99s (target: 5s)
-2026-10-13 12:44:20.174 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'1b5ca766': 0.0, 'd59ddd39': 0.0}
-2026-10-13 12:44:20.174 | INFO     | __main__:<module>:327 - TX TEST: step=1 tx_rate=250000.0 bps
-2026-10-13 12:44:25.294 | INFO     | __main__:<module>:397 - Loop iteration took 62.91s (target: 5s)
-2026-10-13 12:45:28.114 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'1b5ca766': 0.0, 'd59ddd39': 0.0}
-2026-10-13 12:45:28.114 | INFO     | __main__:<module>:327 - TX TEST: step=2 tx_rate=500000.0 bps
-2026-10-13 12:45:30.187 | INFO     | __main__:<module>:397 - Loop iteration took 59.89s (target: 5s)
-2026-10-13 12:46:17.221 | INFO     | __main__:<module>:272 - Switch 71ecc26a from 8a27b954 to cf11c556
-2026-10-13 12:46:17.727 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'1b5ca766': 0.0, 'd59ddd39': 0.0}
-2026-10-13 12:46:17.727 | INFO     | __main__:<module>:327 - TX TEST: step=2 tx_rate=500000.0 bps
-2026-10-13 12:46:19.243 | INFO     | __main__:<module>:397 - Loop iteration took 44.06s (target: 5s)
-2026-10-13 12:47:09.610 | INFO     | __main__:<module>:272 - Switch df45ad38 from 80283466 to 708ecde9
-2026-10-13 12:47:10.243 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'04fa80f2': 0.0, '1b5ca766': 0.0}
-2026-10-13 12:47:10.244 | INFO     | __main__:<module>:327 - TX TEST: step=2 tx_rate=500000.0 bps
-2026-10-13 12:47:11.981 | INFO     | __main__:<module>:397 - Loop iteration took 47.74s (target: 5s)
-2026-10-13 12:47:55.038 | INFO     | __main__:<module>:272 - Switch 71ecc26a from cf11c556 to cf23b3a2
-2026-10-13 12:47:55.447 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'04fa80f2': 0.0, '670ab524': 0.0}
-2026-10-13 12:47:55.447 | INFO     | __main__:<module>:327 - TX TEST: step=2 tx_rate=500000.0 bps
-2026-10-13 12:47:57.220 | INFO     | __main__:<module>:397 - Loop iteration took 40.24s (target: 5s)
-2026-10-13 12:48:40.636 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'248e3fb1': 0.0, '670ab524': 0.0}
-2026-10-13 12:48:40.637 | INFO     | __main__:<module>:327 - TX TEST: step=2 tx_rate=500000.0 bps
-2026-10-13 12:48:42.022 | INFO     | __main__:<module>:397 - Loop iteration took 39.80s (target: 5s)
-2026-10-13 12:49:27.042 | INFO     | __main__:<module>:272 - Switch 71ecc26a from cf23b3a2 to 04cbcac2
-2026-10-13 12:49:28.111 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'248e3fb1': 0.0, '670ab524': 0.0}
-2026-10-13 12:49:28.112 | INFO     | __main__:<module>:327 - TX TEST: step=2 tx_rate=500000.0 bps
-2026-10-13 12:49:30.964 | INFO     | __main__:<module>:397 - Loop iteration took 43.94s (target: 5s)
-2026-10-13 12:50:19.937 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'51a7f7f0': 0.0, '670ab524': 0.0}
-2026-10-13 12:50:19.938 | INFO     | __main__:<module>:327 - TX TEST: step=3 tx_rate=750000.0 bps
-2026-10-13 12:50:21.968 | INFO     | __main__:<module>:397 - Loop iteration took 46.00s (target: 5s)
-2026-10-13 12:51:05.637 | INFO     | __main__:<module>:272 - Switch 71ecc26a from 04cbcac2 to 154921c0
-2026-10-13 12:51:05.921 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'51a7f7f0': 0.0, '670ab524': 0.0}
-2026-10-13 12:51:05.921 | INFO     | __main__:<module>:327 - TX TEST: step=3 tx_rate=750000.0 bps
-2026-10-13 12:51:07.478 | INFO     | __main__:<module>:397 - Loop iteration took 40.51s (target: 5s)
-2026-10-13 12:51:56.057 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'670ab524': 0.0, 'f8a16cbb': 0.0}
-2026-10-13 12:51:56.057 | INFO     | __main__:<module>:327 - TX TEST: step=3 tx_rate=750000.0 bps
-2026-10-13 12:51:57.588 | INFO     | __main__:<module>:397 - Loop iteration took 45.11s (target: 5s)
-2026-10-13 12:52:51.714 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'670ab524': 0.0, 'f8a16cbb': 0.0}
-2026-10-13 12:52:51.715 | INFO     | __main__:<module>:327 - TX TEST: step=3 tx_rate=750000.0 bps
-2026-10-13 12:52:53.113 | INFO     | __main__:<module>:397 - Loop iteration took 50.53s (target: 5s)
-2026-10-13 12:53:38.038 | INFO     | __main__:<module>:272 - Switch 71ecc26a from 154921c0 to 83173d38
-2026-10-13 12:53:38.308 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'670ab524': 0.0, 'f8a16cbb': 0.0}
-2026-10-13 12:53:38.308 | INFO     | __main__:<module>:327 - TX TEST: step=3 tx_rate=750000.0 bps
-2026-10-13 12:53:39.858 | INFO     | __main__:<module>:397 - Loop iteration took 41.74s (target: 5s)
-2026-10-13 12:54:27.959 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'372fa49c': 0.0, '670ab524': 0.0}
-2026-10-13 12:54:27.959 | INFO     | __main__:<module>:327 - TX TEST: step=3 tx_rate=750000.0 bps
-2026-10-13 12:54:29.077 | INFO     | __main__:<module>:397 - Loop iteration took 44.22s (target: 5s)
-2026-10-13 12:55:11.736 | INFO     | __main__:<module>:272 - Switch df45ad38 from 708ecde9 to 54a43641
-2026-10-13 12:55:11.982 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'372fa49c': 0.0, '670ab524': 0.0}
-2026-10-13 12:55:11.982 | INFO     | __main__:<module>:327 - TX TEST: step=4 tx_rate=1000000.0 bps
-2026-10-13 12:55:13.475 | INFO     | __main__:<module>:397 - Loop iteration took 39.40s (target: 5s)
-2026-10-13 12:56:02.276 | INFO     | __main__:<module>:272 - Switch 71ecc26a from 83173d38 to 3677cdc1
-2026-10-13 12:56:02.519 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'372fa49c': 0.0, '8d875b08': 0.0}
-2026-10-13 12:56:02.519 | INFO     | __main__:<module>:327 - TX TEST: step=4 tx_rate=1000000.0 bps
-2026-10-13 12:56:04.167 | INFO     | __main__:<module>:397 - Loop iteration took 45.69s (target: 5s)
-2026-10-13 12:56:51.845 | INFO     | __main__:<module>:272 - Switch df45ad38 from 54a43641 to 532282ba
-2026-10-13 12:56:52.141 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'0098a25d': 0.0, '8d875b08': 0.0}
-2026-10-13 12:56:52.141 | INFO     | __main__:<module>:327 - TX TEST: step=4 tx_rate=1000000.0 bps
-2026-10-13 12:56:53.666 | INFO     | __main__:<module>:397 - Loop iteration took 44.50s (target: 5s)
-2026-10-13 12:57:39.132 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'0098a25d': 0.0, '21c7c64e': 0.0}
-2026-10-13 12:57:39.132 | INFO     | __main__:<module>:327 - TX TEST: step=4 tx_rate=1000000.0 bps
-2026-10-13 12:57:40.874 | INFO     | __main__:<module>:397 - Loop iteration took 42.21s (target: 5s)
-2026-10-13 12:58:26.523 | INFO     | __main__:<module>:272 - Switch 71ecc26a from 3677cdc1 to 23014c46
-2026-10-13 12:58:27.985 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'0098a25d': 0.0, '21c7c64e': 0.0}
-2026-10-13 12:58:27.985 | INFO     | __main__:<module>:327 - TX TEST: step=4 tx_rate=1000000.0 bps
-2026-10-13 12:58:30.424 | INFO     | __main__:<module>:397 - Loop iteration took 44.55s (target: 5s)
-2026-10-13 12:59:17.934 | INFO     | __main__:<module>:272 - Switch 71ecc26a from 23014c46 to 3619816b
-2026-10-13 12:59:18.128 | INFO     | __main__:<module>:272 - Switch df45ad38 from 532282ba to 3144a529
-2026-10-13 12:59:18.536 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'21c7c64e': 0.0, 'b5443008': 0.0}
-2026-10-13 12:59:18.537 | INFO     | __main__:<module>:327 - TX TEST: step=4 tx_rate=1000000.0 bps
-2026-10-13 12:59:20.419 | INFO     | __main__:<module>:397 - Loop iteration took 44.99s (target: 5s)
-2026-10-13 13:00:03.869 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'0c5e6c3b': 0.0, '922bda0c': 0.0}
-2026-10-13 13:00:03.869 | INFO     | __main__:<module>:327 - TX TEST: step=5 tx_rate=0.0 bps
-2026-10-13 13:00:05.552 | INFO     | __main__:<module>:397 - Loop iteration took 40.13s (target: 5s)
-2026-10-13 13:00:53.739 | INFO     | __main__:<module>:272 - Switch 71ecc26a from 3619816b to 0c302292
-2026-10-13 13:00:54.859 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'0c5e6c3b': 0.0, '922bda0c': 0.0}
-2026-10-13 13:00:54.859 | INFO     | __main__:<module>:327 - TX TEST: step=5 tx_rate=0.0 bps
-2026-10-13 13:00:56.730 | INFO     | __main__:<module>:397 - Loop iteration took 46.18s (target: 5s)
-2026-10-13 13:01:48.181 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'7a8fca66': 0.0, '922bda0c': 0.0}
-2026-10-13 13:01:48.181 | INFO     | __main__:<module>:327 - TX TEST: step=5 tx_rate=0.0 bps
-2026-10-13 13:01:49.639 | INFO     | __main__:<module>:397 - Loop iteration took 47.91s (target: 5s)
-2026-10-13 13:02:38.686 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'7a8fca66': 0.0, '922bda0c': 0.0}
-2026-10-13 13:02:38.686 | INFO     | __main__:<module>:327 - TX TEST: step=5 tx_rate=0.0 bps
-2026-10-13 13:02:40.411 | INFO     | __main__:<module>:397 - Loop iteration took 45.77s (target: 5s)
-2026-10-13 13:03:25.974 | INFO     | __main__:<module>:272 - Switch 71ecc26a from 0c302292 to b1b69f0e
-2026-10-13 13:03:26.315 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'7a8fca66': 0.0, '922bda0c': 0.0}
-2026-10-13 13:03:26.315 | INFO     | __main__:<module>:327 - TX TEST: step=5 tx_rate=0.0 bps
-2026-10-13 13:03:27.971 | INFO     | __main__:<module>:397 - Loop iteration took 42.56s (target: 5s)
-2026-10-13 13:04:15.565 | INFO     | __main__:<module>:319 - Ground contact: 2 satellites, tx rates (bps): {'7e485828': 0.0, '922bda0c': 0.0}
-2026-10-13 13:04:15.565 | INFO     | __main__:<module>:327 - TX TEST: step=5 tx_rate=0.0 bps
-2026-10-13 13:04:17.152 | INFO     | __main__:<module>:397 - Loop iteration took 44.18s (target: 5s)
+2026-10-25 17:46:14.823 | INFO     | __main__:init_influxdb_client:79 - InfluxDB client initialized successfully
+2026-10-25 17:46:14.823 | INFO     | __main__:<module>:144 - Waiting for topology to be processed...
+2026-10-25 17:46:17.823 | INFO     | __main__:<module>:149 - Pre-generating all instance configs...
+2026-10-25 17:46:18.008 | INFO     | __main__:<module>:161 - Pre-generated config for 0ceaec25
+2026-10-25 17:46:18.019 | INFO     | __main__:<module>:161 - Pre-generated config for 2c01f566
+2026-10-25 17:46:18.029 | INFO     | __main__:<module>:161 - Pre-generated config for 4d145375
+2026-10-25 17:46:18.065 | INFO     | __main__:<module>:161 - Pre-generated config for 4d9962a4
+2026-10-25 17:46:18.078 | INFO     | __main__:<module>:161 - Pre-generated config for 5a805b44
+2026-10-25 17:46:18.092 | INFO     | __main__:<module>:161 - Pre-generated config for 66452d2d
+2026-10-25 17:46:18.107 | INFO     | __main__:<module>:161 - Pre-generated config for 83f2431b
+2026-10-25 17:46:18.119 | INFO     | __main__:<module>:161 - Pre-generated config for a3cca2c2
+2026-10-25 17:46:18.142 | INFO     | __main__:<module>:161 - Pre-generated config for bab277d8
+2026-10-25 17:46:18.154 | INFO     | __main__:<module>:161 - Pre-generated config for cb3bbcc0
+2026-10-25 17:46:18.183 | INFO     | __main__:<module>:161 - Pre-generated config for ed69aa00
+2026-10-25 17:46:18.184 | INFO     | __main__:<module>:165 - Waiting for config files to be written to disk...
+2026-10-25 17:46:20.184 | INFO     | __main__:<module>:169 - Starting instances...
+2026-10-25 17:46:20.184 | INFO     | __main__:<module>:179 - Waiting for containers to start...
+2026-10-25 17:47:13.036 | INFO     | __main__:<module>:280 - Switch 2c01f566 from None to 0ceaec25
+2026-10-25 17:47:13.133 | INFO     | __main__:<module>:280 - Switch 4d145375 from None to 0ceaec25
+2026-10-25 17:47:13.222 | INFO     | __main__:<module>:310 - Ground contact: 0 satellites, tx rates (bps): {}
+2026-10-25 17:47:13.222 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 17:47:13.334 | INFO     | __main__:<module>:379 - Loop iteration took 50.15s (target: 5s)
+2026-10-25 17:47:46.488 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 17:47:46.488 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 17:47:46.545 | INFO     | __main__:<module>:379 - Loop iteration took 28.21s (target: 5s)
+2026-10-25 17:48:18.445 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 17:48:18.445 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 17:48:18.494 | INFO     | __main__:<module>:379 - Loop iteration took 26.95s (target: 5s)
+2026-10-25 17:48:49.731 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 17:48:49.731 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 17:48:49.776 | INFO     | __main__:<module>:379 - Loop iteration took 26.28s (target: 5s)
+2026-10-25 17:49:25.403 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 545.8041205891437, 'e7579481': 0.0}
+2026-10-25 17:49:25.403 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 17:49:25.469 | INFO     | __main__:<module>:379 - Loop iteration took 30.69s (target: 5s)
+2026-10-25 17:50:05.168 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 17:50:05.168 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 17:50:05.242 | INFO     | __main__:<module>:379 - Loop iteration took 34.77s (target: 5s)
+2026-10-25 17:50:49.274 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 17:50:49.274 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 17:50:49.352 | INFO     | __main__:<module>:379 - Loop iteration took 39.11s (target: 5s)
+2026-10-25 17:51:34.893 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 17:51:34.893 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 17:51:34.988 | INFO     | __main__:<module>:379 - Loop iteration took 40.64s (target: 5s)
+2026-10-25 17:52:18.673 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 17:52:18.674 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 17:52:18.767 | INFO     | __main__:<module>:379 - Loop iteration took 38.78s (target: 5s)
+2026-10-25 17:53:02.127 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 17:53:02.127 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 17:53:02.214 | INFO     | __main__:<module>:379 - Loop iteration took 38.45s (target: 5s)
+2026-10-25 17:53:50.079 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 17:53:50.079 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 17:53:50.231 | INFO     | __main__:<module>:379 - Loop iteration took 43.02s (target: 5s)
+2026-10-25 17:54:33.822 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 17:54:33.822 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 17:54:33.894 | INFO     | __main__:<module>:379 - Loop iteration took 38.66s (target: 5s)
+2026-10-25 17:55:17.343 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 17:55:17.344 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 17:55:17.399 | INFO     | __main__:<module>:379 - Loop iteration took 38.50s (target: 5s)
+2026-10-25 17:56:01.028 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 17:56:01.028 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 17:56:01.102 | INFO     | __main__:<module>:379 - Loop iteration took 38.70s (target: 5s)
+2026-10-25 17:56:45.736 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 17:56:45.736 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 17:56:45.811 | INFO     | __main__:<module>:379 - Loop iteration took 39.71s (target: 5s)
+2026-10-25 17:57:29.038 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 17:57:29.038 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 17:57:29.153 | INFO     | __main__:<module>:379 - Loop iteration took 38.34s (target: 5s)
+2026-10-25 17:58:14.219 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 17:58:14.219 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 17:58:14.306 | INFO     | __main__:<module>:379 - Loop iteration took 40.15s (target: 5s)
+2026-10-25 17:58:59.581 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 17:58:59.581 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 17:58:59.648 | INFO     | __main__:<module>:379 - Loop iteration took 40.34s (target: 5s)
+2026-10-25 17:59:42.956 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 17:59:42.956 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 17:59:43.029 | INFO     | __main__:<module>:379 - Loop iteration took 38.38s (target: 5s)
+2026-10-25 18:00:25.675 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:00:25.675 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:00:25.748 | INFO     | __main__:<module>:379 - Loop iteration took 37.72s (target: 5s)
+2026-10-25 18:01:08.280 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:01:08.280 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:01:08.344 | INFO     | __main__:<module>:379 - Loop iteration took 37.60s (target: 5s)
+2026-10-25 18:01:51.127 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:01:51.127 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:01:51.202 | INFO     | __main__:<module>:379 - Loop iteration took 37.86s (target: 5s)
+2026-10-25 18:02:33.758 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:02:33.758 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:02:33.836 | INFO     | __main__:<module>:379 - Loop iteration took 37.63s (target: 5s)
+2026-10-25 18:03:13.902 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:03:13.902 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:03:13.957 | INFO     | __main__:<module>:379 - Loop iteration took 35.12s (target: 5s)
+2026-10-25 18:03:56.801 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:03:56.801 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:03:56.893 | INFO     | __main__:<module>:379 - Loop iteration took 37.93s (target: 5s)
+2026-10-25 18:04:38.772 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 542.759411216064, 'e7579481': 542.759411216064}
+2026-10-25 18:04:38.773 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:04:38.828 | INFO     | __main__:<module>:379 - Loop iteration took 36.94s (target: 5s)
+2026-10-25 18:05:21.216 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:05:21.217 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:05:21.332 | INFO     | __main__:<module>:379 - Loop iteration took 37.50s (target: 5s)
+2026-10-25 18:06:06.797 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:06:06.797 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:06:06.861 | INFO     | __main__:<module>:379 - Loop iteration took 40.53s (target: 5s)
+2026-10-25 18:06:49.391 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:06:49.391 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:06:49.466 | INFO     | __main__:<module>:379 - Loop iteration took 37.60s (target: 5s)
+2026-10-25 18:07:32.849 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:07:32.849 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:07:32.937 | INFO     | __main__:<module>:379 - Loop iteration took 38.47s (target: 5s)
+2026-10-25 18:08:15.857 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:08:15.857 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:08:15.960 | INFO     | __main__:<module>:379 - Loop iteration took 38.02s (target: 5s)
+2026-10-25 18:09:12.407 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:09:12.407 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:09:12.479 | INFO     | __main__:<module>:379 - Loop iteration took 51.52s (target: 5s)
+2026-10-25 18:09:56.895 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:09:56.896 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:09:56.981 | INFO     | __main__:<module>:379 - Loop iteration took 39.50s (target: 5s)
+2026-10-25 18:10:42.070 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:10:42.070 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:10:42.131 | INFO     | __main__:<module>:379 - Loop iteration took 40.15s (target: 5s)
+2026-10-25 18:11:26.994 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:11:26.994 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:11:27.083 | INFO     | __main__:<module>:379 - Loop iteration took 39.95s (target: 5s)
+2026-10-25 18:12:11.466 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:12:11.466 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:12:11.558 | INFO     | __main__:<module>:379 - Loop iteration took 39.48s (target: 5s)
+2026-10-25 18:12:57.032 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:12:57.032 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:12:57.114 | INFO     | __main__:<module>:379 - Loop iteration took 40.56s (target: 5s)
+2026-10-25 18:13:43.691 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:13:43.691 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:13:43.765 | INFO     | __main__:<module>:379 - Loop iteration took 41.65s (target: 5s)
+2026-10-25 18:14:32.276 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:14:32.277 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:14:32.376 | INFO     | __main__:<module>:379 - Loop iteration took 43.61s (target: 5s)
+2026-10-25 18:15:18.239 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:15:18.239 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:15:18.330 | INFO     | __main__:<module>:379 - Loop iteration took 40.95s (target: 5s)
+2026-10-25 18:16:04.464 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:16:04.464 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:16:04.567 | INFO     | __main__:<module>:379 - Loop iteration took 41.24s (target: 5s)
+2026-10-25 18:16:46.001 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:16:46.002 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:16:46.046 | INFO     | __main__:<module>:379 - Loop iteration took 36.48s (target: 5s)
+2026-10-25 18:17:27.543 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:17:27.543 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:17:27.643 | INFO     | __main__:<module>:379 - Loop iteration took 36.60s (target: 5s)
+2026-10-25 18:18:14.280 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:18:14.281 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:18:14.390 | INFO     | __main__:<module>:379 - Loop iteration took 41.75s (target: 5s)
+2026-10-25 18:19:00.074 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:19:00.074 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:19:00.164 | INFO     | __main__:<module>:379 - Loop iteration took 40.77s (target: 5s)
+2026-10-25 18:19:45.861 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:19:45.862 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:19:45.944 | INFO     | __main__:<module>:379 - Loop iteration took 40.78s (target: 5s)
+2026-10-25 18:20:35.597 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:20:35.597 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:20:35.655 | INFO     | __main__:<module>:379 - Loop iteration took 44.71s (target: 5s)
+2026-10-25 18:21:07.611 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:21:07.611 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:21:07.687 | INFO     | __main__:<module>:379 - Loop iteration took 27.03s (target: 5s)
+2026-10-25 18:21:51.574 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:21:51.574 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:21:51.654 | INFO     | __main__:<module>:379 - Loop iteration took 38.97s (target: 5s)
+2026-10-25 18:22:34.724 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:22:34.724 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:22:34.796 | INFO     | __main__:<module>:379 - Loop iteration took 38.14s (target: 5s)
+2026-10-25 18:23:18.945 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:23:18.945 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:23:19.020 | INFO     | __main__:<module>:379 - Loop iteration took 39.22s (target: 5s)
+2026-10-25 18:24:03.583 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:24:03.583 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:24:03.681 | INFO     | __main__:<module>:379 - Loop iteration took 39.66s (target: 5s)
+2026-10-25 18:24:49.343 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:24:49.343 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:24:49.440 | INFO     | __main__:<module>:379 - Loop iteration took 40.76s (target: 5s)
+2026-10-25 18:25:38.327 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:25:38.327 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:25:38.489 | INFO     | __main__:<module>:379 - Loop iteration took 44.05s (target: 5s)
+2026-10-25 18:26:22.839 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:26:22.839 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:26:22.905 | INFO     | __main__:<module>:379 - Loop iteration took 39.42s (target: 5s)
+2026-10-25 18:27:06.475 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:27:06.475 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:27:06.588 | INFO     | __main__:<module>:379 - Loop iteration took 38.68s (target: 5s)
+2026-10-25 18:27:48.557 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:27:48.558 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:27:48.623 | INFO     | __main__:<module>:379 - Loop iteration took 37.03s (target: 5s)
+2026-10-25 18:28:33.860 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:28:33.860 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:28:33.929 | INFO     | __main__:<module>:379 - Loop iteration took 40.31s (target: 5s)
+2026-10-25 18:29:18.604 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:29:18.604 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:29:18.726 | INFO     | __main__:<module>:379 - Loop iteration took 39.80s (target: 5s)
+2026-10-25 18:30:00.679 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:30:00.679 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:30:00.786 | INFO     | __main__:<module>:379 - Loop iteration took 37.06s (target: 5s)
+2026-10-25 18:30:46.802 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:30:46.802 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:30:46.888 | INFO     | __main__:<module>:379 - Loop iteration took 41.10s (target: 5s)
+2026-10-25 18:31:30.118 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:31:30.118 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:31:30.198 | INFO     | __main__:<module>:379 - Loop iteration took 38.31s (target: 5s)
+2026-10-25 18:32:15.447 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:32:15.447 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:32:15.638 | INFO     | __main__:<module>:379 - Loop iteration took 40.44s (target: 5s)
+2026-10-25 18:33:00.273 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:33:00.273 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:33:00.331 | INFO     | __main__:<module>:379 - Loop iteration took 39.69s (target: 5s)
+2026-10-25 18:33:40.450 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:33:40.450 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:33:40.551 | INFO     | __main__:<module>:379 - Loop iteration took 35.22s (target: 5s)
+2026-10-25 18:34:24.862 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:34:24.863 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:34:24.956 | INFO     | __main__:<module>:379 - Loop iteration took 39.40s (target: 5s)
+2026-10-25 18:35:09.428 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:35:09.428 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:35:09.539 | INFO     | __main__:<module>:379 - Loop iteration took 39.58s (target: 5s)
+2026-10-25 18:35:53.357 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:35:53.357 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:35:53.443 | INFO     | __main__:<module>:379 - Loop iteration took 38.90s (target: 5s)
+2026-10-25 18:36:42.113 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:36:42.113 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:36:42.209 | INFO     | __main__:<module>:379 - Loop iteration took 43.77s (target: 5s)
+2026-10-25 18:37:27.123 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:37:27.123 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:37:27.206 | INFO     | __main__:<module>:379 - Loop iteration took 40.00s (target: 5s)
+2026-10-25 18:38:11.707 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:38:11.707 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:38:11.795 | INFO     | __main__:<module>:379 - Loop iteration took 39.59s (target: 5s)
+2026-10-25 18:38:55.680 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:38:55.680 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:38:55.813 | INFO     | __main__:<module>:379 - Loop iteration took 39.02s (target: 5s)
+2026-10-25 18:39:41.376 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:39:41.377 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:39:41.450 | INFO     | __main__:<module>:379 - Loop iteration took 40.64s (target: 5s)
+2026-10-25 18:40:25.113 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:40:25.113 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:40:25.195 | INFO     | __main__:<module>:379 - Loop iteration took 38.75s (target: 5s)
+2026-10-25 18:41:09.590 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:41:09.590 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:41:09.646 | INFO     | __main__:<module>:379 - Loop iteration took 39.45s (target: 5s)
+2026-10-25 18:41:53.097 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:41:53.097 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:41:53.171 | INFO     | __main__:<module>:379 - Loop iteration took 38.52s (target: 5s)
+2026-10-25 18:42:37.503 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:42:37.503 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:42:37.641 | INFO     | __main__:<module>:379 - Loop iteration took 39.47s (target: 5s)
+2026-10-25 18:43:21.353 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:43:21.353 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:43:21.445 | INFO     | __main__:<module>:379 - Loop iteration took 38.80s (target: 5s)
+2026-10-25 18:44:06.100 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:44:06.100 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:44:06.185 | INFO     | __main__:<module>:379 - Loop iteration took 39.74s (target: 5s)
+2026-10-25 18:44:48.535 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:44:48.535 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:44:48.588 | INFO     | __main__:<module>:379 - Loop iteration took 37.40s (target: 5s)
+2026-10-25 18:45:33.580 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:45:33.580 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:45:33.660 | INFO     | __main__:<module>:379 - Loop iteration took 40.07s (target: 5s)
+2026-10-25 18:46:19.394 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:46:19.395 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:46:19.473 | INFO     | __main__:<module>:379 - Loop iteration took 40.81s (target: 5s)
+2026-10-25 18:47:05.900 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:47:05.900 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:47:05.972 | INFO     | __main__:<module>:379 - Loop iteration took 41.50s (target: 5s)
+2026-10-25 18:47:55.118 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:47:55.118 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:47:55.204 | INFO     | __main__:<module>:379 - Loop iteration took 44.23s (target: 5s)
+2026-10-25 18:48:40.288 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:48:40.289 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:48:40.362 | INFO     | __main__:<module>:379 - Loop iteration took 40.16s (target: 5s)
+2026-10-25 18:49:26.504 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:49:26.504 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:49:26.595 | INFO     | __main__:<module>:379 - Loop iteration took 41.23s (target: 5s)
+2026-10-25 18:50:08.243 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:50:08.243 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:50:08.313 | INFO     | __main__:<module>:379 - Loop iteration took 36.72s (target: 5s)
+2026-10-25 18:51:01.706 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:51:01.706 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:51:01.846 | INFO     | __main__:<module>:379 - Loop iteration took 48.53s (target: 5s)
+2026-10-25 18:51:47.903 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:51:47.903 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:51:47.992 | INFO     | __main__:<module>:379 - Loop iteration took 41.15s (target: 5s)
+2026-10-25 18:52:41.027 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:52:41.027 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:52:41.335 | INFO     | __main__:<module>:379 - Loop iteration took 48.34s (target: 5s)
+2026-10-25 18:53:27.686 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:53:27.686 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:53:27.769 | INFO     | __main__:<module>:379 - Loop iteration took 41.43s (target: 5s)
+2026-10-25 18:54:13.262 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:54:13.262 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:54:13.359 | INFO     | __main__:<module>:379 - Loop iteration took 40.59s (target: 5s)
+2026-10-25 18:54:58.987 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:54:58.987 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:54:59.062 | INFO     | __main__:<module>:379 - Loop iteration took 40.70s (target: 5s)
+2026-10-25 18:55:43.710 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:55:43.710 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:55:43.810 | INFO     | __main__:<module>:379 - Loop iteration took 39.75s (target: 5s)
+2026-10-25 18:56:27.639 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:56:27.640 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:56:27.706 | INFO     | __main__:<module>:379 - Loop iteration took 38.90s (target: 5s)
+2026-10-25 18:57:13.174 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:57:13.175 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:57:13.315 | INFO     | __main__:<module>:379 - Loop iteration took 40.61s (target: 5s)
+2026-10-25 18:58:00.127 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:58:00.127 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:58:00.219 | INFO     | __main__:<module>:379 - Loop iteration took 41.90s (target: 5s)
+2026-10-25 18:58:46.071 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:58:46.071 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:58:46.173 | INFO     | __main__:<module>:379 - Loop iteration took 40.95s (target: 5s)
+2026-10-25 18:59:34.217 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 18:59:34.217 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 18:59:34.275 | INFO     | __main__:<module>:379 - Loop iteration took 43.10s (target: 5s)
+2026-10-25 19:00:17.843 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:00:17.843 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:00:17.939 | INFO     | __main__:<module>:379 - Loop iteration took 38.66s (target: 5s)
+2026-10-25 19:01:06.976 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:01:06.977 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:01:07.071 | INFO     | __main__:<module>:379 - Loop iteration took 44.13s (target: 5s)
+2026-10-25 19:01:50.318 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:01:50.318 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:01:50.390 | INFO     | __main__:<module>:379 - Loop iteration took 38.32s (target: 5s)
+2026-10-25 19:02:37.986 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:02:37.986 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:02:38.094 | INFO     | __main__:<module>:379 - Loop iteration took 42.70s (target: 5s)
+2026-10-25 19:03:29.825 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:03:29.825 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:03:29.906 | INFO     | __main__:<module>:379 - Loop iteration took 46.81s (target: 5s)
+2026-10-25 19:04:18.485 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:04:18.485 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:04:18.551 | INFO     | __main__:<module>:379 - Loop iteration took 43.64s (target: 5s)
+2026-10-25 19:05:07.985 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:05:07.988 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:05:08.124 | INFO     | __main__:<module>:379 - Loop iteration took 44.57s (target: 5s)
+2026-10-25 19:06:04.262 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:06:04.263 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:06:04.371 | INFO     | __main__:<module>:379 - Loop iteration took 51.25s (target: 5s)
+2026-10-25 19:07:02.276 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:07:02.276 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:07:02.781 | INFO     | __main__:<module>:379 - Loop iteration took 53.41s (target: 5s)
+2026-10-25 19:07:51.117 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:07:51.117 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:07:51.215 | INFO     | __main__:<module>:379 - Loop iteration took 43.43s (target: 5s)
+2026-10-25 19:08:39.107 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:08:39.108 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:08:39.197 | INFO     | __main__:<module>:379 - Loop iteration took 42.98s (target: 5s)
+2026-10-25 19:09:28.962 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:09:28.962 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:09:29.060 | INFO     | __main__:<module>:379 - Loop iteration took 44.86s (target: 5s)
+2026-10-25 19:10:15.242 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:10:15.242 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:10:15.320 | INFO     | __main__:<module>:379 - Loop iteration took 41.26s (target: 5s)
+2026-10-25 19:11:03.937 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:11:03.938 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:11:04.011 | INFO     | __main__:<module>:379 - Loop iteration took 43.69s (target: 5s)
+2026-10-25 19:11:53.383 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:11:53.383 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:11:53.486 | INFO     | __main__:<module>:379 - Loop iteration took 44.48s (target: 5s)
+2026-10-25 19:12:38.898 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:12:38.899 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:12:38.997 | INFO     | __main__:<module>:379 - Loop iteration took 40.51s (target: 5s)
+2026-10-25 19:13:26.717 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:13:26.717 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:13:26.793 | INFO     | __main__:<module>:379 - Loop iteration took 42.80s (target: 5s)
+2026-10-25 19:14:18.026 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:14:18.026 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:14:18.218 | INFO     | __main__:<module>:379 - Loop iteration took 46.42s (target: 5s)
+2026-10-25 19:14:57.230 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:14:57.230 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:14:57.298 | INFO     | __main__:<module>:379 - Loop iteration took 34.08s (target: 5s)
+2026-10-25 19:15:45.433 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:15:45.433 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:15:45.529 | INFO     | __main__:<module>:379 - Loop iteration took 43.23s (target: 5s)
+2026-10-25 19:16:29.136 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:16:29.136 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:16:29.284 | INFO     | __main__:<module>:379 - Loop iteration took 38.76s (target: 5s)
+2026-10-25 19:17:15.154 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:17:15.154 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:17:15.234 | INFO     | __main__:<module>:379 - Loop iteration took 40.95s (target: 5s)
+2026-10-25 19:17:56.773 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:17:56.773 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:17:56.881 | INFO     | __main__:<module>:379 - Loop iteration took 36.65s (target: 5s)
+2026-10-25 19:18:37.927 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:18:37.927 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:18:38.001 | INFO     | __main__:<module>:379 - Loop iteration took 36.12s (target: 5s)
+2026-10-25 19:19:18.277 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:19:18.277 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:19:18.346 | INFO     | __main__:<module>:379 - Loop iteration took 35.34s (target: 5s)
+2026-10-25 19:19:59.401 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:19:59.402 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:19:59.480 | INFO     | __main__:<module>:379 - Loop iteration took 36.13s (target: 5s)
+2026-10-25 19:20:49.877 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:20:49.877 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:20:50.010 | INFO     | __main__:<module>:379 - Loop iteration took 45.53s (target: 5s)
+2026-10-25 19:21:45.476 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:21:45.476 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:21:45.559 | INFO     | __main__:<module>:379 - Loop iteration took 50.55s (target: 5s)
+2026-10-25 19:22:29.976 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:22:29.976 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:22:30.068 | INFO     | __main__:<module>:379 - Loop iteration took 39.51s (target: 5s)
+2026-10-25 19:23:15.574 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:23:15.574 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:23:15.628 | INFO     | __main__:<module>:379 - Loop iteration took 40.56s (target: 5s)
+2026-10-25 19:24:01.459 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:24:01.459 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:24:01.540 | INFO     | __main__:<module>:379 - Loop iteration took 40.91s (target: 5s)
+2026-10-25 19:24:43.307 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:24:43.308 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:24:43.412 | INFO     | __main__:<module>:379 - Loop iteration took 36.87s (target: 5s)
+2026-10-25 19:25:24.560 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:25:24.560 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:25:24.614 | INFO     | __main__:<module>:379 - Loop iteration took 36.20s (target: 5s)
+2026-10-25 19:26:08.510 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:26:08.510 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:26:08.589 | INFO     | __main__:<module>:379 - Loop iteration took 38.97s (target: 5s)
+2026-10-25 19:26:54.531 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:26:54.531 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:26:54.612 | INFO     | __main__:<module>:379 - Loop iteration took 41.02s (target: 5s)
+2026-10-25 19:27:38.439 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:27:38.439 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:27:38.515 | INFO     | __main__:<module>:379 - Loop iteration took 38.90s (target: 5s)
+2026-10-25 19:28:22.253 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:28:22.253 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:28:22.393 | INFO     | __main__:<module>:379 - Loop iteration took 38.88s (target: 5s)
+2026-10-25 19:29:04.220 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:29:04.220 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:29:04.316 | INFO     | __main__:<module>:379 - Loop iteration took 36.92s (target: 5s)
+2026-10-25 19:29:46.043 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:29:46.043 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:29:46.123 | INFO     | __main__:<module>:379 - Loop iteration took 36.81s (target: 5s)
+2026-10-25 19:30:27.810 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:30:27.810 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:30:27.898 | INFO     | __main__:<module>:379 - Loop iteration took 36.77s (target: 5s)
+2026-10-25 19:31:09.371 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:31:09.372 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:31:09.460 | INFO     | __main__:<module>:379 - Loop iteration took 36.56s (target: 5s)
+2026-10-25 19:31:51.919 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:31:51.919 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:31:52.016 | INFO     | __main__:<module>:379 - Loop iteration took 37.56s (target: 5s)
+2026-10-25 19:32:35.639 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:32:35.639 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:32:35.722 | INFO     | __main__:<module>:379 - Loop iteration took 38.71s (target: 5s)
+2026-10-25 19:33:17.574 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:33:17.574 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:33:17.669 | INFO     | __main__:<module>:379 - Loop iteration took 36.95s (target: 5s)
+2026-10-25 19:34:00.973 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:34:00.973 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:34:01.107 | INFO     | __main__:<module>:379 - Loop iteration took 38.44s (target: 5s)
+2026-10-25 19:34:44.665 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:34:44.665 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:34:44.797 | INFO     | __main__:<module>:379 - Loop iteration took 38.69s (target: 5s)
+2026-10-25 19:35:27.713 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:35:27.713 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:35:27.794 | INFO     | __main__:<module>:379 - Loop iteration took 38.00s (target: 5s)
+2026-10-25 19:36:08.714 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:36:08.714 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:36:08.775 | INFO     | __main__:<module>:379 - Loop iteration took 35.98s (target: 5s)
+2026-10-25 19:36:55.959 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:36:55.959 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:36:56.022 | INFO     | __main__:<module>:379 - Loop iteration took 42.25s (target: 5s)
+2026-10-25 19:37:43.882 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:37:43.882 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:37:44.003 | INFO     | __main__:<module>:379 - Loop iteration took 42.98s (target: 5s)
+2026-10-25 19:38:28.103 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:38:28.103 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:38:28.185 | INFO     | __main__:<module>:379 - Loop iteration took 39.18s (target: 5s)
+2026-10-25 19:39:09.057 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:39:09.057 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:39:09.130 | INFO     | __main__:<module>:379 - Loop iteration took 35.94s (target: 5s)
+2026-10-25 19:39:51.985 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:39:51.985 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:39:52.095 | INFO     | __main__:<module>:379 - Loop iteration took 37.96s (target: 5s)
+2026-10-25 19:40:33.582 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:40:33.582 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:40:33.728 | INFO     | __main__:<module>:379 - Loop iteration took 36.63s (target: 5s)
+2026-10-25 19:41:21.964 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:41:21.964 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:41:22.048 | INFO     | __main__:<module>:379 - Loop iteration took 43.32s (target: 5s)
+2026-10-25 19:42:04.128 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:42:04.129 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:42:04.206 | INFO     | __main__:<module>:379 - Loop iteration took 37.16s (target: 5s)
+2026-10-25 19:42:46.720 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:42:46.720 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:42:46.833 | INFO     | __main__:<module>:379 - Loop iteration took 37.63s (target: 5s)
+2026-10-25 19:43:28.688 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:43:28.688 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:43:28.785 | INFO     | __main__:<module>:379 - Loop iteration took 36.95s (target: 5s)
+2026-10-25 19:44:11.468 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:44:11.468 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:44:11.534 | INFO     | __main__:<module>:379 - Loop iteration took 37.75s (target: 5s)
+2026-10-25 19:44:54.107 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:44:54.107 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:44:54.174 | INFO     | __main__:<module>:379 - Loop iteration took 37.64s (target: 5s)
+2026-10-25 19:45:38.912 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:45:38.912 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:45:39.033 | INFO     | __main__:<module>:379 - Loop iteration took 39.86s (target: 5s)
+2026-10-25 19:46:22.812 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:46:22.812 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:46:22.890 | INFO     | __main__:<module>:379 - Loop iteration took 38.86s (target: 5s)
+2026-10-25 19:47:08.802 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:47:08.802 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:47:08.864 | INFO     | __main__:<module>:379 - Loop iteration took 40.97s (target: 5s)
+2026-10-25 19:48:06.304 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:48:06.304 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:48:06.384 | INFO     | __main__:<module>:379 - Loop iteration took 52.52s (target: 5s)
+2026-10-25 19:48:50.968 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:48:50.968 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:48:51.056 | INFO     | __main__:<module>:379 - Loop iteration took 39.67s (target: 5s)
+2026-10-25 19:49:36.748 | INFO     | __main__:<module>:310 - Ground contact: 1 satellites, tx rates (bps): {'0f5ca8f9': 0.0, 'e7579481': 0.0}
+2026-10-25 19:49:36.748 | INFO     | __main__:<module>:313 - {'0ceaec25': '1', '4d9962a4': '3', '5a805b44': '7', '66452d2d': '6', '83f2431b': '2', 'a3cca2c2': '0', 'bab277d8': '5', 'cb3bbcc0': '8', 'ed69aa00': '4'}
+2026-10-25 19:49:36.829 | INFO     | __main__:<module>:379 - Loop iteration took 40.77s (target: 5s)

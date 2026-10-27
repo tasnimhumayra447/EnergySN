@@ -24,16 +24,8 @@ from influxdb_client import InfluxDBClient
 
 # simulation updates every 5 seconds
 step_second = 5
-
+UTILIZATION_WINDOW = "1m"  # PLACEHOLDER: averaging window for CPU utilization (should be a few times the metric write interval)
 polar_threshold = dec2ra(66.5)
-
-# TESTING Pcomm
-import os
-TX_TEST_LEVELS = [float(x) for x in os.environ.get("POWER_TEST_TX_PROFILE", "").split(",") if x]
-TX_TEST_STEP_S = int(os.environ.get("POWER_TEST_STEP_S", "600"))
-tx_test_start = datetime.now().timestamp()
-
-print(f"TX test mode: levels={TX_TEST_LEVELS}, step={TX_TEST_STEP_S}s", flush=True)
 
 # InfluxDB configuration
 influxdb_url = "http://localhost:8086"  # Adjust based on your config
@@ -97,7 +89,7 @@ def get_all_utilizations() -> dict[str, float]:
     try:
         query = f'''
         from(bucket: "{influxdb_bucket}")
-            |> range(start: -3m)
+            |> range(start: -{UTILIZATION_WINDOW})
             |> filter(fn: (r) => r._measurement == "instance_performance")
             |> filter(fn: (r) => r._field == "CPUUsage")
             |> group(columns: ["instance_id"])
@@ -187,7 +179,6 @@ if __name__ == "__main__":
     logger.info("Waiting for containers to start...")
     sleep(3)
     
-
     # Create Emulator Operator
     while True:
         loop_start = time.time()
@@ -317,29 +308,20 @@ if __name__ == "__main__":
         all_link_ids = [l for links in ground_links.values() for l in links]
         tx_rates = get_link_tx_rates(all_link_ids)
         logger.info(f"Ground contact: {len(ground_links)} satellites, tx rates (bps): {tx_rates}")
-        # # Debugging line: log the satellite indices for all satellites in the instance map
-        # logger.info({i.instance_id: i.extra.get(EX_SATELLITE_INDEX) for i in all_instance_map.values() if i.type == TYPE_SATELLITE})
 
-        test_tx_rate = None
-        if TX_TEST_LEVELS:
-            step = int((time_now.timestamp() - tx_test_start) // TX_TEST_STEP_S)
-            test_tx_rate = TX_TEST_LEVELS[step % len(TX_TEST_LEVELS)]
-            logger.info(f"TX TEST: step={step} tx_rate={test_tx_rate} bps")
+        # Debugging line: log the satellite indices for all satellites in the instance map
+        logger.info({i.instance_id: i.extra.get(EX_SATELLITE_INDEX) for i in all_instance_map.values() if i.type == TYPE_SATELLITE})
 
         for instance_id, instance_info in all_instance_map.items():
             if instance_info.start and instance_info.type == TYPE_SATELLITE:
                 gamma = calculate_sun_angle(instance_info, time_now)
-                utilization = utilizations.get(instance_id, 0.5)
+                if instance_id not in utilizations:
+                    logger.warning(f"No CPU utilization for {instance_id}, assuming 0")
+                utilization = utilizations.get(instance_id, 0.0)
                 link_ids = ground_links.get(instance_id, [])
                 
-                ################################################## check Pcomm
                 has_contact = len(link_ids) > 0                          
-                tx_rate = sum(tx_rates.get(l, 0.0) for l in link_ids)    
-                if test_tx_rate is not None:      # test mode: override real values
-                    has_contact = True
-                    tx_rate = test_tx_rate
-
-                ##################################################    
+                tx_rate = sum(tx_rates.get(l, 0.0) for l in link_ids)
 
                 cli.put_solar_input(instance_id, SolarInput(
                     sun_angle_rad=gamma,

@@ -6,6 +6,7 @@ from instance_types import (
     EX_PANEL_AREA_KEY,EX_CELL_EFFICIENCY_KEY,EX_SYSTEM_EFFICIENCY_KEY,EX_IDLE_POWER_KEY,EX_MAX_POWER_KEY,
     EX_BATTERY_CAPACITY_WH_KEY, EX_BATTERY_THRESHOLD_PERCENT_KEY,
     EX_SENSOR_POWER_KEY, EX_ALPHA_DVFS_KEY, EX_MAX_FREQUENCY_KEY, EX_BANDWIDTH_KEY, EX_CHANNEL_GAIN_RATIO_KEY,
+    EX_STATIC_POWER_KEY, EX_MIN_FREQUENCY_KEY,
     )
 
 from address_type import LINK_V4_ADDR_KEY
@@ -116,16 +117,18 @@ if __name__ == "__main__":
                     EX_AREA_KEY:"0.0.0.0",
                     EX_ORBIT_INDEX: str(i),
                     EX_SATELLITE_INDEX: str(j),
-                    EX_PANEL_AREA_KEY: "0.059",
-                    EX_CELL_EFFICIENCY_KEY: "0.29",
+                    EX_PANEL_AREA_KEY: "0.06",
+                    EX_CELL_EFFICIENCY_KEY: "0.30",
                     EX_SYSTEM_EFFICIENCY_KEY: "0.90",
-                    EX_IDLE_POWER_KEY: "4.0",
+                    EX_IDLE_POWER_KEY: "2.0", 
                     EX_MAX_POWER_KEY: "20.0",
                     EX_BATTERY_CAPACITY_WH_KEY: "30.0",
                     EX_BATTERY_THRESHOLD_PERCENT_KEY: "10.0",
-                    EX_SENSOR_POWER_KEY: "2.0",
-                    EX_ALPHA_DVFS_KEY: "6.46e-27",
+                    EX_SENSOR_POWER_KEY: "5.0",
+                    EX_ALPHA_DVFS_KEY: "2.84e-27",
+                    EX_MIN_FREQUENCY_KEY: "1.02e8",
                     EX_MAX_FREQUENCY_KEY: "9.18e8",
+                    EX_STATIC_POWER_KEY: "1.1",    # PLACEHOLDER: c2, static power of the on-board computer
                     EX_BANDWIDTH_KEY: "1.6e5",
                     EX_CHANNEL_GAIN_RATIO_KEY: "17.5",
                 }))

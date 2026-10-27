@@ -24,13 +24,13 @@ from influxdb_client import InfluxDBClient
 
 # simulation updates every 5 seconds
 step_second = 5
-
+UTILIZATION_WINDOW = "1m"
 polar_threshold = dec2ra(66.5)
 
 # TESTING Pcomm
 import os
 TX_TEST_LEVELS = [float(x) for x in os.environ.get("POWER_TEST_TX_PROFILE", "").split(",") if x]
-TX_TEST_STEP_S = int(os.environ.get("POWER_TEST_STEP_S", "600"))
+TX_TEST_STEP_S = int(os.environ.get("POWER_TEST_STEP_S", "60"))
 tx_test_start = datetime.now().timestamp()
 
 print(f"TX test mode: levels={TX_TEST_LEVELS}, step={TX_TEST_STEP_S}s", flush=True)
@@ -97,7 +97,7 @@ def get_all_utilizations() -> dict[str, float]:
     try:
         query = f'''
         from(bucket: "{influxdb_bucket}")
-            |> range(start: -3m)
+            |> range(start: -{UTILIZATION_WINDOW})
             |> filter(fn: (r) => r._measurement == "instance_performance")
             |> filter(fn: (r) => r._field == "CPUUsage")
             |> group(columns: ["instance_id"])
@@ -329,7 +329,9 @@ if __name__ == "__main__":
         for instance_id, instance_info in all_instance_map.items():
             if instance_info.start and instance_info.type == TYPE_SATELLITE:
                 gamma = calculate_sun_angle(instance_info, time_now)
-                utilization = utilizations.get(instance_id, 0.5)
+                if instance_id not in utilizations:
+                    logger.warning(f"No CPU utilization for {instance_id}, assuming 0")
+                utilization = utilizations.get(instance_id, 0.0)
                 link_ids = ground_links.get(instance_id, [])
                 
                 ################################################## check Pcomm
