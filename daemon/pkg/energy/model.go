@@ -259,6 +259,12 @@ func NewComponentConsumptionModel(policy FrequencyPolicy) *ComponentConsumptionM
 	return &ComponentConsumptionModel{Policy: policy}
 }
 
+// ITPower returns P_IT = c1 * f^3 * u + c2 for a given frequency and utilization.
+func ITPower(spec PowerSpecInput, freq, u float64) float64 {
+	u = math.Max(0, math.Min(1, u))
+	return spec.AlphaDVFS*freq*freq*freq*u + spec.StaticPowerW
+}
+
 func (m *ComponentConsumptionModel) CommPower(spec PowerSpecInput, in ConsumptionInput) float64 {
 	// Comm: only draws power while a ground station link is up
 	if !in.HasGroundContact {
@@ -273,7 +279,7 @@ func (m *ComponentConsumptionModel) Consume(spec PowerSpecInput, in ConsumptionI
 	// grows with f^3 and u, and a constant static part is always drawn
 	u := math.Max(0, math.Min(1, in.Utilization))
 	freq := m.Policy.Frequency(spec, u)
-	itW := spec.AlphaDVFS*freq*freq*freq*u + spec.StaticPowerW
+	itW := ITPower(spec, freq, u)
 
 	commW := m.CommPower(spec, in)
 

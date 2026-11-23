@@ -266,8 +266,10 @@ func powerDaemonFunc(sigChan chan int, errChan chan error) {
 			if err != nil {
 				logrus.Errorf("PowerModule: put power status for %s error: %s", instance.InstanceID, err.Error())
 			} else {
-				freqMHz := consumptionModel.Policy.Frequency(spec, input.Utilization) / 1e6
-				logrus.Infof("PowerModule DEBUG: ts=%.2f instance=%s u=%.3f contact=%t tx=%.0fbps gen=%.2fW consume=%.2fW battery=%.2f%% (%.2f/%.2f Wh) freq=%.0fMHz comm=%.6fW",
+				freqHz := consumptionModel.Policy.Frequency(spec, input.Utilization)
+				itW := energy.ITPower(spec, freqHz, input.Utilization)
+				freqMHz := freqHz / 1e6
+				logrus.Infof("PowerModule DEBUG: ts=%.2f instance=%s u=%.3f contact=%t tx=%.0fbps gen=%.2fW consume=%.2fW battery=%.2f%% (%.2f/%.2f Wh) freq=%.0fMHz comm=%.6fW it=%.3fW",
 					input.Timestamp,
 					instance.InstanceID,
 					input.Utilization,
@@ -280,6 +282,7 @@ func powerDaemonFunc(sigChan chan int, errChan chan error) {
 					battCfg.CapacityWh,
 					freqMHz,
 					commW,
+					itW,
 				)
 			
 			}
