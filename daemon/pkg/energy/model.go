@@ -74,21 +74,29 @@ type PowerSpecInput struct {
 	ChannelGainRatio float64
 }
 
-// ReflectivityLoss is a standard empirical estimate for angle-dependent
-// panel-surface reflectivity loss (rho(gamma)). 
-// Claude came up with it. THIS IS A PLACEHOLDER! FIND SOMETHING RIGOROUS:
-
-//   rho(gamma) = rho0 + (1 - rho0) * sin(gamma)^n
-//
-// rho0 ~ 0.04 (typical AR-coated space-grade cell reflectance at normal
-// incidence), n = 5 (reflectivity stays low until fairly grazing angles,
-// then rises sharply) - standard shape used in solar-panel power-loss
-// approximations.
+// ReflectivityLoss computes exact unpolarized Fresnel reflectance at a
+// vacuum-to-coverglass interface (n1 = 1.0, n2 = 1.5 -> rho0 = 0.04).
 func ReflectivityLoss(sunAngleRad float64) float64 {
-	const rho0 = 0.04
-	const n = 5.0
-	return rho0 + (1-rho0)*math.Pow(math.Sin(sunAngleRad), n)
+	if sunAngleRad <= 0 {
+		return 0.04
+	}
+	if sunAngleRad >= math.Pi/2 {
+		return 1.0
+	}
+
+	const n2 = 1.5 // Standard coverglass refractive index (rho0 = 0.04)
+	const n2Sq = n2 * n2
+
+	sinG := math.Sin(sunAngleRad)
+	cosG := math.Cos(sunAngleRad)
+	root := math.Sqrt(n2Sq - sinG*sinG)
+
+	rs := (cosG - root) / (cosG + root)
+	rp := (n2Sq*cosG - root) / (n2Sq*cosG + root)
+
+	return 0.5 * (rs*rs + rp*rp)
 }
+
 
 // FullPowerModel implements the equation from the energy extension design:
 //

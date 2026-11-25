@@ -33,9 +33,9 @@ BASE = {
     EX_MAX_POWER_KEY: "20.0",
 
     EX_BATTERY_CAPACITY_WH_KEY: "30.0",
-    EX_BATTERY_THRESHOLD_PERCENT_KEY: "10.0",
+    EX_BATTERY_THRESHOLD_PERCENT_KEY: "20.0",
 
-    EX_ALPHA_DVFS_KEY: "2.84e-27",
+    EX_ALPHA_DVFS_KEY: "1e-26",
     EX_STATIC_POWER_KEY: "1.1",
     EX_MIN_FREQUENCY_KEY: "1.02e8",
     EX_MAX_FREQUENCY_KEY: "9.18e8",
@@ -85,15 +85,8 @@ VARIANTS = [
 assert len(VARIANTS) == 9
 assert len({name for name, _ in VARIANTS}) == len(VARIANTS)
 
-# Generate one set of orbital elements and reuse them for every satellite.
-sat, _ = generate_tle(
-    1, 1,
-    0, 0,
-    90,
-    1,
-    1 / 13.1507,
-)
-_, tle1, tle2 = sat[0]
+tle = json.load(open("shared_tle.json"))
+tle1, tle2 = tle["tle1"], tle["tle2"]
 
 config = TopologyConfig()
 names = {}

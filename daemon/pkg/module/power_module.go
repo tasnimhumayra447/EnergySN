@@ -13,6 +13,9 @@ import (
 	"strconv"
 	"sync"
 	"time"
+	"fmt"
+	"os"
+	"os/exec"
 
 	"github.com/sirupsen/logrus"
 )
@@ -36,6 +39,7 @@ const (
 	ExMinFrequencyKey     = "min_frequency_hz" // lowest CPU frequency DVFS may pick
 	ExBatteryCapacityWhKey    = "battery_capacity_wh"    // size this to survive eclipse
 	ExBatteryThresholdPercentKey = "battery_threshold_percent" // e.g. "10" for 10%
+	ExPolicyEnabledKey = "policy_enabled"
 )
 
 type PowerModule struct {
@@ -122,12 +126,31 @@ func batteryConfigFromExtra(extra map[string]string) (batteryConfig, bool) {
 	}, true
 }
 
+// SIGSTOP/SIGCONT the non-critical process group inside a satellite container.
+// Returns true only if the signal was delivered, so state is never recorded on failure.
+func setNonCritical(containerName string, pause bool) bool {
+	sig := "CONT"
+	if pause {
+		sig = "STOP"
+	}
+	cmd := fmt.Sprintf("kill -%s -$(cat /tmp/nc.pgid)", sig)
+	if out, err := exec.Command("docker", "exec", containerName, "sh", "-c", cmd).CombinedOutput(); err != nil {
+		logrus.Warnf("PowerModule: %s %s failed: %v %s", sig, containerName, err, out)
+		return false
+	}
+	return true
+}
+
 func powerDaemonFunc(sigChan chan int, errChan chan error) {
 	generationModel := energy.NewFullPowerModel()
 	// DVFS policy: one policy for all satellites, like the generation model.
 	// Format: "utilization limit : fraction of max frequency", bands from low to high.
 	// PLACEHOLDER: sample policy (u up to 50% runs at fmax/2, above that at fmax)
-	policy, err := energy.ParseBandPolicy("0.5:0.5,1.0:1.0")
+	bands := os.Getenv("DVFS_BANDS")
+	if bands == "" {
+		bands = "1.0:1.0" // fixed f_max, DVFS disabled
+	}
+	policy, err := energy.ParseBandPolicy(bands)
 	if err != nil {
 		errChan <- err
 		return
@@ -139,6 +162,8 @@ func powerDaemonFunc(sigChan chan int, errChan chan error) {
 	// only at write-time for display/threshold reporting.
 	batteryWh := make(map[string]float64)
 	lastTimestamp := make(map[string]float64)
+	paused := make(map[string]bool)
+	const resumeMarginPct = 10.0
 
 	for {
 		select {
@@ -250,8 +275,21 @@ func powerDaemonFunc(sigChan chan int, errChan chan error) {
 			// never stored, never fed back into the next tick's math.
 			percent := (newWh / battCfg.CapacityWh) * 100.0
 
-			if percent < battCfg.ThresholdPercent {
-				logrus.Warnf("PowerModule: instance %s battery at %.1f%%, below threshold %.1f%% — would pause container here (pause/unpause not implemented yet)", instance.InstanceID, percent, battCfg.ThresholdPercent)
+			policyOn := instance.Extra[ExPolicyEnabledKey] == "1"
+			if policyOn {
+				ctr := fmt.Sprintf("%s_%s", instance.Type, instance.InstanceID)
+				isPaused := paused[instance.InstanceID]
+				if !isPaused && (generated <= 0 || percent < battCfg.ThresholdPercent) {
+					if setNonCritical(ctr, true) {
+						paused[instance.InstanceID] = true
+						logrus.Infof("PowerModule: PAUSE %s (gen=%.2fW soc=%.1f%%)", instance.InstanceID, generated, percent)
+					}
+				} else if isPaused && generated > 0 && percent > battCfg.ThresholdPercent+resumeMarginPct {
+					if setNonCritical(ctr, false) {
+						paused[instance.InstanceID] = false
+						logrus.Infof("PowerModule: RESUME %s (gen=%.2fW soc=%.1f%%)", instance.InstanceID, generated, percent)
+					}
+				}
 			}
 
 			status := model.PowerStatus{
@@ -269,7 +307,7 @@ func powerDaemonFunc(sigChan chan int, errChan chan error) {
 				freqHz := consumptionModel.Policy.Frequency(spec, input.Utilization)
 				itW := energy.ITPower(spec, freqHz, input.Utilization)
 				freqMHz := freqHz / 1e6
-				logrus.Infof("PowerModule DEBUG: ts=%.2f instance=%s u=%.3f contact=%t tx=%.0fbps gen=%.2fW consume=%.2fW battery=%.2f%% (%.2f/%.2f Wh) freq=%.0fMHz comm=%.6fW it=%.3fW",
+				logrus.Infof("PowerModule DEBUG: ts=%.2f instance=%s u=%.3f contact=%t tx=%.0fbps gen=%.2fW consume=%.2fW battery=%.2f%% (%.2f/%.2f Wh) freq=%.0fMHz comm=%.6fW it=%.3fW policy=%t paused=%t",
 					input.Timestamp,
 					instance.InstanceID,
 					input.Utilization,
@@ -283,6 +321,8 @@ func powerDaemonFunc(sigChan chan int, errChan chan error) {
 					freqMHz,
 					commW,
 					itW,
+					policyOn, 
+					paused[instance.InstanceID],
 				)
 			
 			}

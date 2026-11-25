@@ -38,3 +38,4 @@ EX_BANDWIDTH_KEY = "bandwidth_hz"
 EX_CHANNEL_GAIN_RATIO_KEY = "channel_gain_ratio"
 EX_BATTERY_CAPACITY_WH_KEY = "battery_capacity_wh"
 EX_BATTERY_THRESHOLD_PERCENT_KEY = "battery_threshold_percent"
+EX_POLICY_ENABLED_KEY = "policy_enabled"   # "1" = scheduler on; absent or "0" = off

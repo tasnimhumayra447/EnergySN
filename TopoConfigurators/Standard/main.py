@@ -19,13 +19,21 @@ from loguru import logger
 
 # my code:
 from trajectory import calculate_postion,distance_meter, select_closest_satellite, get_propagation_delay_s, calculate_sun_angle
-import json, math, time
+import json, math, os, time
 from influxdb_client import InfluxDBClient
 
 # simulation updates every 5 seconds
 step_second = 5
-UTILIZATION_WINDOW = "1m"  # PLACEHOLDER: averaging window for CPU utilization (should be a few times the metric write interval)
+SIM_START = datetime.fromisoformat(os.environ.get("SIM_START", "2026-11-23T00:00:00"))
+GO_FILE = "/tmp/sim_go"
+UTILIZATION_WINDOW = "1m"
 polar_threshold = dec2ra(66.5)
+
+# TESTING Pcomm
+TX_TEST_LEVELS = [float(x) for x in os.environ.get("POWER_TEST_TX_PROFILE", "").split(",") if x]
+TX_TEST_STEP_S = int(os.environ.get("POWER_TEST_STEP_S", "60"))
+
+print(f"TX test mode: levels={TX_TEST_LEVELS}, step={TX_TEST_STEP_S}s", flush=True)
 
 # InfluxDB configuration
 influxdb_url = "http://localhost:8086"  # Adjust based on your config
@@ -132,6 +140,8 @@ def get_link_tx_rates(link_ids: list[str]) -> dict[str, float]:
         return {}
 
 if __name__ == "__main__":
+    if os.path.exists(GO_FILE):
+        os.remove(GO_FILE)
 
     instance_config_updated:dict[str,str] = {}
     
@@ -179,6 +189,13 @@ if __name__ == "__main__":
     logger.info("Waiting for containers to start...")
     sleep(3)
     
+    logger.info(f"Containers up. Start any load, then run: touch {GO_FILE}")
+    while not os.path.exists(GO_FILE):
+        sleep(0.5)
+    REAL_START = datetime.now()                 # simulated clock starts here
+    tx_test_start = SIM_START.timestamp()       # Pcom test steps count from simulated t=0
+    logger.info(f"Simulation clock started at {SIM_START}")
+
     # Create Emulator Operator
     while True:
         loop_start = time.time()
@@ -223,7 +240,7 @@ if __name__ == "__main__":
                 
 
         position_map: dict[str,Position] = {"":Position()}
-        time_now = datetime.now()
+        time_now = SIM_START + (datetime.now() - REAL_START)
         utilizations = get_all_utilizations()   # NEW: one query for everyone, not one per satellite
         for instance_id,instance_info in all_instance_map.items():
             if instance_info.start:
@@ -308,9 +325,14 @@ if __name__ == "__main__":
         all_link_ids = [l for links in ground_links.values() for l in links]
         tx_rates = get_link_tx_rates(all_link_ids)
         logger.info(f"Ground contact: {len(ground_links)} satellites, tx rates (bps): {tx_rates}")
+        # # Debugging line: log the satellite indices for all satellites in the instance map
+        # logger.info({i.instance_id: i.extra.get(EX_SATELLITE_INDEX) for i in all_instance_map.values() if i.type == TYPE_SATELLITE})
 
-        # Debugging line: log the satellite indices for all satellites in the instance map
-        logger.info({i.instance_id: i.extra.get(EX_SATELLITE_INDEX) for i in all_instance_map.values() if i.type == TYPE_SATELLITE})
+        test_tx_rate = None
+        if TX_TEST_LEVELS:
+            step = int((time_now.timestamp() - tx_test_start) // TX_TEST_STEP_S)
+            test_tx_rate = TX_TEST_LEVELS[step % len(TX_TEST_LEVELS)]
+            logger.info(f"TX TEST: step={step} tx_rate={test_tx_rate} bps")
 
         for instance_id, instance_info in all_instance_map.items():
             if instance_info.start and instance_info.type == TYPE_SATELLITE:
@@ -320,8 +342,14 @@ if __name__ == "__main__":
                 utilization = utilizations.get(instance_id, 0.0)
                 link_ids = ground_links.get(instance_id, [])
                 
+                ################################################## check Pcomm
                 has_contact = len(link_ids) > 0                          
-                tx_rate = sum(tx_rates.get(l, 0.0) for l in link_ids)
+                tx_rate = sum(tx_rates.get(l, 0.0) for l in link_ids)    
+                if test_tx_rate is not None:      # test mode: override real values
+                    has_contact = True
+                    tx_rate = test_tx_rate
+
+                ##################################################    
 
                 cli.put_solar_input(instance_id, SolarInput(
                     sun_angle_rad=gamma,

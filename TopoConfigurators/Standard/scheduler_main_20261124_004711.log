@@ -1,0 +1,351 @@
+TX test mode: levels=[], step=60s
+2026-11-24 00:47:11.541 | INFO     | __main__:init_influxdb_client:87 - InfluxDB client initialized successfully
+2026-11-24 00:47:11.541 | INFO     | __main__:<module>:154 - Waiting for topology to be processed...
+2026-11-24 00:47:14.542 | INFO     | __main__:<module>:159 - Pre-generating all instance configs...
+2026-11-24 00:47:14.705 | INFO     | __main__:<module>:171 - Pre-generated config for 2d290c38
+2026-11-24 00:47:14.716 | INFO     | __main__:<module>:171 - Pre-generated config for 2ea33936
+2026-11-24 00:47:14.730 | INFO     | __main__:<module>:171 - Pre-generated config for 8a9dacec
+2026-11-24 00:47:14.747 | INFO     | __main__:<module>:171 - Pre-generated config for 97dd48e9
+2026-11-24 00:47:14.747 | INFO     | __main__:<module>:175 - Waiting for config files to be written to disk...
+2026-11-24 00:47:16.747 | INFO     | __main__:<module>:179 - Starting instances...
+2026-11-24 00:47:16.747 | INFO     | __main__:<module>:189 - Waiting for containers to start...
+2026-11-24 00:47:19.747 | INFO     | __main__:<module>:192 - Containers up. Start any load, then run: touch /tmp/sim_go
+2026-11-24 00:48:08.275 | INFO     | __main__:<module>:197 - Simulation clock started at 2026-11-23 00:53:28.388832
+2026-11-24 00:48:35.363 | INFO     | __main__:<module>:297 - Switch 2d290c38 from None to 2ea33936
+2026-11-24 00:48:35.424 | INFO     | __main__:<module>:297 - Switch 8a9dacec from None to 2ea33936
+2026-11-24 00:48:35.488 | INFO     | __main__:<module>:327 - Ground contact: 0 satellites, tx rates (bps): {}
+2026-11-24 00:48:35.499 | INFO     | __main__:<module>:407 - Loop iteration took 27.22s (target: 5s)
+2026-11-24 00:49:07.491 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 00:49:07.514 | INFO     | __main__:<module>:407 - Loop iteration took 27.01s (target: 5s)
+2026-11-24 00:49:58.077 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 00:49:58.118 | INFO     | __main__:<module>:407 - Loop iteration took 45.60s (target: 5s)
+2026-11-24 00:50:34.259 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 00:50:34.293 | INFO     | __main__:<module>:407 - Loop iteration took 31.17s (target: 5s)
+2026-11-24 00:51:09.889 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 00:51:09.910 | INFO     | __main__:<module>:407 - Loop iteration took 30.62s (target: 5s)
+2026-11-24 00:51:43.546 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 00:51:43.568 | INFO     | __main__:<module>:407 - Loop iteration took 28.66s (target: 5s)
+2026-11-24 00:52:16.406 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 00:52:16.426 | INFO     | __main__:<module>:407 - Loop iteration took 27.86s (target: 5s)
+2026-11-24 00:52:47.457 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 00:52:47.484 | INFO     | __main__:<module>:407 - Loop iteration took 26.06s (target: 5s)
+2026-11-24 00:53:29.410 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 00:53:29.440 | INFO     | __main__:<module>:407 - Loop iteration took 36.96s (target: 5s)
+2026-11-24 00:54:05.662 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 00:54:05.705 | INFO     | __main__:<module>:407 - Loop iteration took 31.27s (target: 5s)
+2026-11-24 00:54:55.186 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 00:54:55.226 | INFO     | __main__:<module>:407 - Loop iteration took 44.52s (target: 5s)
+2026-11-24 00:55:42.776 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 00:55:42.837 | INFO     | __main__:<module>:407 - Loop iteration took 42.61s (target: 5s)
+2026-11-24 00:56:24.456 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 00:56:24.488 | INFO     | __main__:<module>:407 - Loop iteration took 36.65s (target: 5s)
+2026-11-24 00:56:58.495 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 00:56:58.517 | INFO     | __main__:<module>:407 - Loop iteration took 29.03s (target: 5s)
+2026-11-24 00:57:39.497 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 00:57:39.539 | INFO     | __main__:<module>:407 - Loop iteration took 36.02s (target: 5s)
+2026-11-24 00:58:15.491 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 00:58:15.513 | INFO     | __main__:<module>:407 - Loop iteration took 30.97s (target: 5s)
+2026-11-24 00:58:52.413 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 00:58:52.445 | INFO     | __main__:<module>:407 - Loop iteration took 31.93s (target: 5s)
+2026-11-24 00:59:23.549 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 00:59:23.565 | INFO     | __main__:<module>:407 - Loop iteration took 26.12s (target: 5s)
+2026-11-24 01:00:03.398 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:00:03.421 | INFO     | __main__:<module>:407 - Loop iteration took 34.86s (target: 5s)
+2026-11-24 01:00:36.227 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:00:36.253 | INFO     | __main__:<module>:407 - Loop iteration took 27.83s (target: 5s)
+2026-11-24 01:01:17.109 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:01:17.155 | INFO     | __main__:<module>:407 - Loop iteration took 35.90s (target: 5s)
+2026-11-24 01:01:50.803 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:01:50.824 | INFO     | __main__:<module>:407 - Loop iteration took 28.67s (target: 5s)
+2026-11-24 01:02:24.088 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:02:24.105 | INFO     | __main__:<module>:407 - Loop iteration took 28.28s (target: 5s)
+2026-11-24 01:02:55.746 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:02:55.767 | INFO     | __main__:<module>:407 - Loop iteration took 26.66s (target: 5s)
+2026-11-24 01:03:30.322 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:03:30.342 | INFO     | __main__:<module>:407 - Loop iteration took 29.58s (target: 5s)
+2026-11-24 01:04:02.110 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:04:02.128 | INFO     | __main__:<module>:407 - Loop iteration took 26.79s (target: 5s)
+2026-11-24 01:04:33.197 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:04:33.224 | INFO     | __main__:<module>:407 - Loop iteration took 26.09s (target: 5s)
+2026-11-24 01:05:03.790 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:05:03.808 | INFO     | __main__:<module>:407 - Loop iteration took 25.58s (target: 5s)
+2026-11-24 01:05:34.490 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:05:34.508 | INFO     | __main__:<module>:407 - Loop iteration took 25.70s (target: 5s)
+2026-11-24 01:06:06.590 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:06:06.627 | INFO     | __main__:<module>:407 - Loop iteration took 27.12s (target: 5s)
+2026-11-24 01:06:45.121 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:06:45.167 | INFO     | __main__:<module>:407 - Loop iteration took 33.54s (target: 5s)
+2026-11-24 01:07:19.944 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:07:19.967 | INFO     | __main__:<module>:407 - Loop iteration took 29.80s (target: 5s)
+2026-11-24 01:07:51.726 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:07:51.750 | INFO     | __main__:<module>:407 - Loop iteration took 26.78s (target: 5s)
+2026-11-24 01:08:29.204 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:08:29.228 | INFO     | __main__:<module>:407 - Loop iteration took 32.48s (target: 5s)
+2026-11-24 01:09:00.541 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:09:00.560 | INFO     | __main__:<module>:407 - Loop iteration took 26.33s (target: 5s)
+2026-11-24 01:09:34.545 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:09:34.590 | INFO     | __main__:<module>:407 - Loop iteration took 29.03s (target: 5s)
+2026-11-24 01:10:17.283 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:10:17.314 | INFO     | __main__:<module>:407 - Loop iteration took 37.72s (target: 5s)
+2026-11-24 01:11:01.838 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:11:01.865 | INFO     | __main__:<module>:407 - Loop iteration took 39.55s (target: 5s)
+2026-11-24 01:11:44.141 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:11:44.181 | INFO     | __main__:<module>:407 - Loop iteration took 37.32s (target: 5s)
+2026-11-24 01:12:28.001 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:12:28.036 | INFO     | __main__:<module>:407 - Loop iteration took 38.85s (target: 5s)
+2026-11-24 01:13:12.260 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:13:12.288 | INFO     | __main__:<module>:407 - Loop iteration took 39.25s (target: 5s)
+2026-11-24 01:13:57.177 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:13:57.214 | INFO     | __main__:<module>:407 - Loop iteration took 39.92s (target: 5s)
+2026-11-24 01:14:42.393 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:14:42.459 | INFO     | __main__:<module>:407 - Loop iteration took 40.24s (target: 5s)
+2026-11-24 01:15:26.731 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:15:26.758 | INFO     | __main__:<module>:407 - Loop iteration took 39.30s (target: 5s)
+2026-11-24 01:16:10.149 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:16:10.187 | INFO     | __main__:<module>:407 - Loop iteration took 38.43s (target: 5s)
+2026-11-24 01:16:53.605 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:16:53.652 | INFO     | __main__:<module>:407 - Loop iteration took 38.46s (target: 5s)
+2026-11-24 01:17:39.833 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:17:39.852 | INFO     | __main__:<module>:407 - Loop iteration took 41.20s (target: 5s)
+2026-11-24 01:18:17.558 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:18:17.594 | INFO     | __main__:<module>:407 - Loop iteration took 32.74s (target: 5s)
+2026-11-24 01:18:59.830 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:18:59.866 | INFO     | __main__:<module>:407 - Loop iteration took 37.27s (target: 5s)
+2026-11-24 01:19:42.984 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:19:43.011 | INFO     | __main__:<module>:407 - Loop iteration took 38.14s (target: 5s)
+2026-11-24 01:20:26.590 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:20:26.620 | INFO     | __main__:<module>:407 - Loop iteration took 38.61s (target: 5s)
+2026-11-24 01:21:08.184 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:21:08.203 | INFO     | __main__:<module>:407 - Loop iteration took 36.58s (target: 5s)
+2026-11-24 01:21:47.744 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:21:47.773 | INFO     | __main__:<module>:407 - Loop iteration took 34.57s (target: 5s)
+2026-11-24 01:22:31.219 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:22:31.245 | INFO     | __main__:<module>:407 - Loop iteration took 38.47s (target: 5s)
+2026-11-24 01:23:15.588 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:23:15.616 | INFO     | __main__:<module>:407 - Loop iteration took 39.37s (target: 5s)
+2026-11-24 01:23:58.065 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:23:58.088 | INFO     | __main__:<module>:407 - Loop iteration took 37.47s (target: 5s)
+2026-11-24 01:24:40.656 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:24:40.681 | INFO     | __main__:<module>:407 - Loop iteration took 37.59s (target: 5s)
+2026-11-24 01:25:23.711 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:25:23.738 | INFO     | __main__:<module>:407 - Loop iteration took 38.06s (target: 5s)
+2026-11-24 01:26:06.232 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:26:06.253 | INFO     | __main__:<module>:407 - Loop iteration took 37.51s (target: 5s)
+2026-11-24 01:26:49.871 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:26:49.899 | INFO     | __main__:<module>:407 - Loop iteration took 38.65s (target: 5s)
+2026-11-24 01:27:32.022 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:27:32.060 | INFO     | __main__:<module>:407 - Loop iteration took 37.16s (target: 5s)
+2026-11-24 01:28:14.220 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:28:14.247 | INFO     | __main__:<module>:407 - Loop iteration took 37.19s (target: 5s)
+2026-11-24 01:28:57.359 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:28:57.381 | INFO     | __main__:<module>:407 - Loop iteration took 38.13s (target: 5s)
+2026-11-24 01:29:39.349 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:29:39.375 | INFO     | __main__:<module>:407 - Loop iteration took 36.99s (target: 5s)
+2026-11-24 01:30:22.233 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:30:22.258 | INFO     | __main__:<module>:407 - Loop iteration took 37.88s (target: 5s)
+2026-11-24 01:31:04.982 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:31:05.010 | INFO     | __main__:<module>:407 - Loop iteration took 37.75s (target: 5s)
+2026-11-24 01:31:47.339 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:31:47.366 | INFO     | __main__:<module>:407 - Loop iteration took 37.36s (target: 5s)
+2026-11-24 01:32:30.548 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:32:30.578 | INFO     | __main__:<module>:407 - Loop iteration took 38.21s (target: 5s)
+2026-11-24 01:33:13.776 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:33:13.802 | INFO     | __main__:<module>:407 - Loop iteration took 38.22s (target: 5s)
+2026-11-24 01:33:58.601 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:33:58.630 | INFO     | __main__:<module>:407 - Loop iteration took 39.83s (target: 5s)
+2026-11-24 01:34:40.793 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:34:40.822 | INFO     | __main__:<module>:407 - Loop iteration took 37.19s (target: 5s)
+2026-11-24 01:35:24.500 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:35:24.523 | INFO     | __main__:<module>:407 - Loop iteration took 38.70s (target: 5s)
+2026-11-24 01:36:08.791 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:36:08.825 | INFO     | __main__:<module>:407 - Loop iteration took 39.30s (target: 5s)
+2026-11-24 01:36:52.212 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:36:52.237 | INFO     | __main__:<module>:407 - Loop iteration took 38.41s (target: 5s)
+2026-11-24 01:37:34.994 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:37:35.045 | INFO     | __main__:<module>:407 - Loop iteration took 37.81s (target: 5s)
+2026-11-24 01:38:17.521 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:38:17.554 | INFO     | __main__:<module>:407 - Loop iteration took 37.51s (target: 5s)
+2026-11-24 01:38:59.615 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:38:59.646 | INFO     | __main__:<module>:407 - Loop iteration took 37.09s (target: 5s)
+2026-11-24 01:39:44.127 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:39:44.152 | INFO     | __main__:<module>:407 - Loop iteration took 39.51s (target: 5s)
+2026-11-24 01:40:31.157 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:40:31.195 | INFO     | __main__:<module>:407 - Loop iteration took 42.04s (target: 5s)
+2026-11-24 01:41:13.817 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:41:13.852 | INFO     | __main__:<module>:407 - Loop iteration took 37.66s (target: 5s)
+2026-11-24 01:41:56.396 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:41:56.423 | INFO     | __main__:<module>:407 - Loop iteration took 37.57s (target: 5s)
+2026-11-24 01:42:40.119 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:42:40.146 | INFO     | __main__:<module>:407 - Loop iteration took 38.72s (target: 5s)
+2026-11-24 01:43:23.456 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:43:23.489 | INFO     | __main__:<module>:407 - Loop iteration took 38.34s (target: 5s)
+2026-11-24 01:44:06.353 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:44:06.390 | INFO     | __main__:<module>:407 - Loop iteration took 37.90s (target: 5s)
+2026-11-24 01:44:49.548 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:44:49.584 | INFO     | __main__:<module>:407 - Loop iteration took 38.19s (target: 5s)
+2026-11-24 01:45:32.490 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:45:32.535 | INFO     | __main__:<module>:407 - Loop iteration took 37.95s (target: 5s)
+2026-11-24 01:46:16.554 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:46:16.578 | INFO     | __main__:<module>:407 - Loop iteration took 39.04s (target: 5s)
+2026-11-24 01:47:00.709 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:47:00.739 | INFO     | __main__:<module>:407 - Loop iteration took 39.16s (target: 5s)
+2026-11-24 01:47:42.713 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:47:42.741 | INFO     | __main__:<module>:407 - Loop iteration took 37.00s (target: 5s)
+2026-11-24 01:48:26.383 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:48:26.409 | INFO     | __main__:<module>:407 - Loop iteration took 38.67s (target: 5s)
+2026-11-24 01:49:09.775 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:49:09.810 | INFO     | __main__:<module>:407 - Loop iteration took 38.40s (target: 5s)
+2026-11-24 01:49:47.103 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:49:47.133 | INFO     | __main__:<module>:407 - Loop iteration took 32.32s (target: 5s)
+2026-11-24 01:50:29.877 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:50:29.905 | INFO     | __main__:<module>:407 - Loop iteration took 37.77s (target: 5s)
+2026-11-24 01:51:11.400 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:51:11.424 | INFO     | __main__:<module>:407 - Loop iteration took 36.52s (target: 5s)
+2026-11-24 01:51:52.776 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:51:52.798 | INFO     | __main__:<module>:407 - Loop iteration took 36.37s (target: 5s)
+2026-11-24 01:52:35.668 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:52:35.703 | INFO     | __main__:<module>:407 - Loop iteration took 37.90s (target: 5s)
+2026-11-24 01:53:18.939 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:53:18.979 | INFO     | __main__:<module>:407 - Loop iteration took 38.28s (target: 5s)
+2026-11-24 01:54:01.265 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:54:01.304 | INFO     | __main__:<module>:407 - Loop iteration took 37.32s (target: 5s)
+2026-11-24 01:54:43.363 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:54:43.402 | INFO     | __main__:<module>:407 - Loop iteration took 37.10s (target: 5s)
+2026-11-24 01:55:26.475 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:55:26.517 | INFO     | __main__:<module>:407 - Loop iteration took 38.11s (target: 5s)
+2026-11-24 01:56:10.881 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:56:10.904 | INFO     | __main__:<module>:407 - Loop iteration took 39.39s (target: 5s)
+2026-11-24 01:56:53.133 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:56:53.171 | INFO     | __main__:<module>:407 - Loop iteration took 37.27s (target: 5s)
+2026-11-24 01:57:35.105 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:57:35.143 | INFO     | __main__:<module>:407 - Loop iteration took 36.97s (target: 5s)
+2026-11-24 01:58:17.687 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:58:17.708 | INFO     | __main__:<module>:407 - Loop iteration took 37.56s (target: 5s)
+2026-11-24 01:59:00.258 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:59:00.288 | INFO     | __main__:<module>:407 - Loop iteration took 37.58s (target: 5s)
+2026-11-24 01:59:41.641 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 01:59:41.685 | INFO     | __main__:<module>:407 - Loop iteration took 36.40s (target: 5s)
+2026-11-24 02:00:22.683 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:00:22.706 | INFO     | __main__:<module>:407 - Loop iteration took 36.02s (target: 5s)
+2026-11-24 02:01:04.735 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:01:04.761 | INFO     | __main__:<module>:407 - Loop iteration took 37.05s (target: 5s)
+2026-11-24 02:01:45.949 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:01:45.974 | INFO     | __main__:<module>:407 - Loop iteration took 36.21s (target: 5s)
+2026-11-24 02:02:27.500 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:02:27.522 | INFO     | __main__:<module>:407 - Loop iteration took 36.55s (target: 5s)
+2026-11-24 02:03:09.676 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:03:09.721 | INFO     | __main__:<module>:407 - Loop iteration took 37.20s (target: 5s)
+2026-11-24 02:03:51.852 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:03:51.882 | INFO     | __main__:<module>:407 - Loop iteration took 37.16s (target: 5s)
+2026-11-24 02:04:33.696 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:04:33.721 | INFO     | __main__:<module>:407 - Loop iteration took 36.84s (target: 5s)
+2026-11-24 02:05:16.457 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:05:16.481 | INFO     | __main__:<module>:407 - Loop iteration took 37.76s (target: 5s)
+2026-11-24 02:06:01.741 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:06:01.783 | INFO     | __main__:<module>:407 - Loop iteration took 40.30s (target: 5s)
+2026-11-24 02:06:46.456 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:06:46.490 | INFO     | __main__:<module>:407 - Loop iteration took 39.71s (target: 5s)
+2026-11-24 02:07:30.213 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:07:30.237 | INFO     | __main__:<module>:407 - Loop iteration took 38.75s (target: 5s)
+2026-11-24 02:08:12.762 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:08:12.812 | INFO     | __main__:<module>:407 - Loop iteration took 37.57s (target: 5s)
+2026-11-24 02:08:56.268 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:08:56.310 | INFO     | __main__:<module>:407 - Loop iteration took 38.50s (target: 5s)
+2026-11-24 02:09:38.813 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:09:38.841 | INFO     | __main__:<module>:407 - Loop iteration took 37.53s (target: 5s)
+2026-11-24 02:10:19.796 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:10:19.830 | INFO     | __main__:<module>:407 - Loop iteration took 35.99s (target: 5s)
+2026-11-24 02:11:03.304 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:11:03.332 | INFO     | __main__:<module>:407 - Loop iteration took 38.50s (target: 5s)
+2026-11-24 02:11:46.893 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:11:46.920 | INFO     | __main__:<module>:407 - Loop iteration took 38.59s (target: 5s)
+2026-11-24 02:12:29.419 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:12:29.445 | INFO     | __main__:<module>:407 - Loop iteration took 37.52s (target: 5s)
+2026-11-24 02:13:12.418 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:13:12.445 | INFO     | __main__:<module>:407 - Loop iteration took 38.00s (target: 5s)
+2026-11-24 02:13:52.836 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:13:52.863 | INFO     | __main__:<module>:407 - Loop iteration took 35.42s (target: 5s)
+2026-11-24 02:14:33.926 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:14:33.959 | INFO     | __main__:<module>:407 - Loop iteration took 36.10s (target: 5s)
+2026-11-24 02:15:16.287 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:15:16.328 | INFO     | __main__:<module>:407 - Loop iteration took 37.37s (target: 5s)
+2026-11-24 02:15:57.691 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:15:57.740 | INFO     | __main__:<module>:407 - Loop iteration took 36.41s (target: 5s)
+2026-11-24 02:16:40.198 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:16:40.237 | INFO     | __main__:<module>:407 - Loop iteration took 37.50s (target: 5s)
+2026-11-24 02:17:23.337 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:17:23.368 | INFO     | __main__:<module>:407 - Loop iteration took 38.13s (target: 5s)
+2026-11-24 02:18:06.960 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:18:06.991 | INFO     | __main__:<module>:407 - Loop iteration took 38.62s (target: 5s)
+2026-11-24 02:18:50.684 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:18:50.711 | INFO     | __main__:<module>:407 - Loop iteration took 38.72s (target: 5s)
+2026-11-24 02:19:32.933 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:19:32.971 | INFO     | __main__:<module>:407 - Loop iteration took 37.26s (target: 5s)
+2026-11-24 02:20:15.119 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:20:15.151 | INFO     | __main__:<module>:407 - Loop iteration took 37.18s (target: 5s)
+2026-11-24 02:20:57.148 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:20:57.171 | INFO     | __main__:<module>:407 - Loop iteration took 37.02s (target: 5s)
+2026-11-24 02:21:38.854 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:21:38.878 | INFO     | __main__:<module>:407 - Loop iteration took 36.71s (target: 5s)
+2026-11-24 02:22:21.147 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:22:21.173 | INFO     | __main__:<module>:407 - Loop iteration took 37.29s (target: 5s)
+2026-11-24 02:23:04.802 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:23:04.832 | INFO     | __main__:<module>:407 - Loop iteration took 38.66s (target: 5s)
+2026-11-24 02:23:47.492 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:23:47.532 | INFO     | __main__:<module>:407 - Loop iteration took 37.70s (target: 5s)
+2026-11-24 02:24:29.120 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:24:29.148 | INFO     | __main__:<module>:407 - Loop iteration took 36.62s (target: 5s)
+2026-11-24 02:25:11.466 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:25:11.511 | INFO     | __main__:<module>:407 - Loop iteration took 37.36s (target: 5s)
+2026-11-24 02:25:54.150 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:25:54.187 | INFO     | __main__:<module>:407 - Loop iteration took 37.68s (target: 5s)
+2026-11-24 02:26:39.171 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:26:39.207 | INFO     | __main__:<module>:407 - Loop iteration took 40.02s (target: 5s)
+2026-11-24 02:27:22.311 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:27:22.364 | INFO     | __main__:<module>:407 - Loop iteration took 38.16s (target: 5s)
+2026-11-24 02:28:04.696 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:28:04.731 | INFO     | __main__:<module>:407 - Loop iteration took 37.37s (target: 5s)
+2026-11-24 02:28:48.051 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:28:48.079 | INFO     | __main__:<module>:407 - Loop iteration took 38.35s (target: 5s)
+2026-11-24 02:29:31.342 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:29:31.375 | INFO     | __main__:<module>:407 - Loop iteration took 38.30s (target: 5s)
+2026-11-24 02:30:14.087 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:30:14.118 | INFO     | __main__:<module>:407 - Loop iteration took 37.74s (target: 5s)
+2026-11-24 02:30:59.251 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:30:59.299 | INFO     | __main__:<module>:407 - Loop iteration took 40.18s (target: 5s)
+2026-11-24 02:31:43.696 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:31:43.729 | INFO     | __main__:<module>:407 - Loop iteration took 39.43s (target: 5s)
+2026-11-24 02:32:29.188 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:32:29.211 | INFO     | __main__:<module>:407 - Loop iteration took 40.48s (target: 5s)
+2026-11-24 02:33:11.700 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:33:11.725 | INFO     | __main__:<module>:407 - Loop iteration took 37.51s (target: 5s)
+2026-11-24 02:33:53.741 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:33:53.778 | INFO     | __main__:<module>:407 - Loop iteration took 37.05s (target: 5s)
+2026-11-24 02:34:35.138 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:34:35.163 | INFO     | __main__:<module>:407 - Loop iteration took 36.38s (target: 5s)
+2026-11-24 02:35:18.678 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:35:18.702 | INFO     | __main__:<module>:407 - Loop iteration took 38.54s (target: 5s)
+2026-11-24 02:36:01.172 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:36:01.200 | INFO     | __main__:<module>:407 - Loop iteration took 37.50s (target: 5s)
+2026-11-24 02:36:43.877 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:36:43.917 | INFO     | __main__:<module>:407 - Loop iteration took 37.72s (target: 5s)
+2026-11-24 02:37:26.042 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:37:26.088 | INFO     | __main__:<module>:407 - Loop iteration took 37.17s (target: 5s)
+2026-11-24 02:38:10.412 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:38:10.463 | INFO     | __main__:<module>:407 - Loop iteration took 39.37s (target: 5s)
+2026-11-24 02:38:53.374 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:38:53.403 | INFO     | __main__:<module>:407 - Loop iteration took 37.94s (target: 5s)
+2026-11-24 02:39:37.392 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:39:37.427 | INFO     | __main__:<module>:407 - Loop iteration took 39.02s (target: 5s)
+2026-11-24 02:40:21.345 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:40:21.372 | INFO     | __main__:<module>:407 - Loop iteration took 38.95s (target: 5s)
+2026-11-24 02:41:06.365 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:41:06.391 | INFO     | __main__:<module>:407 - Loop iteration took 40.02s (target: 5s)
+2026-11-24 02:41:52.783 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:41:52.811 | INFO     | __main__:<module>:407 - Loop iteration took 41.42s (target: 5s)
+2026-11-24 02:42:36.609 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:42:36.631 | INFO     | __main__:<module>:407 - Loop iteration took 38.82s (target: 5s)
+2026-11-24 02:43:17.965 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:43:18.000 | INFO     | __main__:<module>:407 - Loop iteration took 36.37s (target: 5s)
+2026-11-24 02:43:59.119 | INFO     | __main__:<module>:327 - Ground contact: 1 satellites, tx rates (bps): {'40a5950a': 0.0, 'cc5650f6': 0.0}
+2026-11-24 02:43:59.150 | INFO     | __main__:<module>:407 - Loop iteration took 36.15s (target: 5s)
